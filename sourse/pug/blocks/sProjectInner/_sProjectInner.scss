@@ -14,7 +14,8 @@
 		padding: rem(21) rem(30) rem(20);
 		margin-bottom: calc(var(--sTPB) * 1.2);
 
-		h2 {
+		h1 {
+			@extend .h2;
 			margin-bottom: 0;
 			letter-spacing: rem(0.4);
 		}
@@ -149,6 +150,17 @@
 			padding: rem(13) rem(29) !important;
 		}
 	}// tabs end
+
+	//content
+	&__video {
+		position: relative;
+		display: block;
+	}
+
+	&__row {
+		padding-top: 1.5rem;
+		padding-bottom: rem(40);
+	}
 
 	
 
