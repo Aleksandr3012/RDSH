@@ -158,7 +158,8 @@
 	border-radius: $border-radius;
 	margin-bottom: rem(30);
 
-	h2 {
+	h1 {
+		@extend h2;
 		margin-bottom: 0;
 	}
 	

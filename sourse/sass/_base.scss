@@ -138,6 +138,10 @@ body {
 
 .section-title {
 	padding-bottom: var(--sTPB);
+	h1{
+		@extend .h2;
+		
+	}
 }
 
 
