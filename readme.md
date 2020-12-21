@@ -12,6 +12,7 @@
 1. <https://aleksandr3012.github.io/RDSH/public/09-projects.html>
 1. <https://aleksandr3012.github.io/RDSH/public/10-project-page.html>
 1. <https://aleksandr3012.github.io/RDSH/public/11-schools.html>
-2. <https://aleksandr3012.github.io/RDSH/public/13-about.html>
-3. <https://aleksandr3012.github.io/RDSH/public/14-events.html>
-4. <https://aleksandr3012.github.io/RDSH/public/15-structure.html>
+2. <https://aleksandr3012.github.io/RDSH/public/12-school.html>
+3. <https://aleksandr3012.github.io/RDSH/public/13-about.html>
+4. <https://aleksandr3012.github.io/RDSH/public/14-events.html>
+5. <https://aleksandr3012.github.io/RDSH/public/15-structure.html>
