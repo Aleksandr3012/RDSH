@@ -326,6 +326,17 @@ function eventHandler() {
 		}
 	}); // modal window
 
+	var swiper = new Swiper('.swiper-container', {
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 14
+		}
+	});
 	$('.accardionToggle--js').on('click', function () {
 		$(this).toggleClass('active').parent().find('.accardion_hiddenBlock-js').slideToggle(); // $(this).parent().toggleClass('active');
 	});

@@ -66,9 +66,28 @@ mixin content1
 						+e.btn(href="#") Подать заявку
 				.row
 					.col-lg-6
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								mixin slide(i)
+									.swiper-slide
+										+e.imgWrap(href=`img/@2x/${i}.jpg` data-fancybox="photogalery")
+											picture.picture-bg
+												source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/${i}.webp` type="image/webp")
+												img.swiper-lazy(src="#" data-src=`img/@2x/${i}.jpg`, alt="")
+										+e.category Видеогалерея
+										+e.title Как прошел конкурс “Викторина победы”
+								+slide('photo-gallery')
+								+slide('banner-2')
+								+slide('project-bg-2_3')
+							.swiper-button-prev
+							.swiper-button-next
 					.col-lg-6
-						+e.video(href="#")
+						+e.video(href="https://youtu.be/LJ7qXHjxj_0" data-fancybox="video")
+							+pic('video-bg.jpg','bg','')(class="picture-bg")
 							+e.play
+								+icon('play')
+							+e.category Видеогалерея
+							+e.title Как прошел конкурс “Викторина победы”
 
 
 
