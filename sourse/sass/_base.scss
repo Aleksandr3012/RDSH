@@ -132,6 +132,7 @@ body {
 		padding-top: var(--sPT);
 		padding-bottom: var(--sPB);
 		@extend .bg-w;
+		position: relative;
 	}
 }
 
@@ -298,8 +299,7 @@ ul {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	background-color: var(--swiperBgDef); 
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -312,13 +312,12 @@ ul {
 	@include mt;
 
 	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
+		background-color: var(--swiperBgDefHover); 
 		color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(16);
 	}
 
 	&::after {
@@ -483,4 +482,14 @@ iframe {
 		background: rgba($color: #fff, $alpha: 0.17);
 		backdrop-filter: blur(5px);
 	}
+}
+
+option{
+	background-color:$secondary;
+}
+
+.btn-white{
+	background-color: rgba($color: #fff, $alpha: 0.05);
+	border-color: rgba($color: #fff, $alpha: 0.05);
+	color: #ffffff;
 }

@@ -19,11 +19,11 @@
 	--sMB: #{rem(40 / 2)};
 
 
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperArrowSize: #{rem(40)};
+		--swiperArrowPosition: #{rem(30)};
 		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: #ffffff;
+		--swiperColorDef: #fff;
+		--swiperBgDef: #{rgba($color: #f4f7ff, $alpha: .15)};
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
 		--swiperColorDefHover: var(--bs-primary);

@@ -1,0 +1,24 @@
+
+// start .sSchoolHead
+.sSchoolHead {
+	margin-bottom: rem(50);
+	&__item{
+		min-height: calc(100% - 30px);
+		margin-bottom: 30px; 
+	}
+	&__title{
+		margin-bottom: 1rem;
+	}
+	h1{
+		@extend .h2;
+		font-weight: 500;
+		margin-bottom: rem(50);
+	}
+	a{
+		color: #9dd2ff;
+	}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSchoolHead

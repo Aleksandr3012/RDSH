@@ -76,7 +76,9 @@
 		}
 		margin-bottom: rem(33);
 	}
-
+	path{
+		@include mt;
+	}
 	polygon, .js-show-area, .area-pink, .area-yellow, .area-red, .area-pink, .area-yellow, .area-red, .area-red, .area-blue {
 		fill: #6a94f4;
 		@include mt;
@@ -85,6 +87,21 @@
 
 		&:hover, &:focus, &:active {
 			fill: #f44d51;
+		}
+	}
+	
+	a{
+		path{
+			cursor: pointer;
+		}
+		position: relative;
+
+	}
+	a:hover{
+		path{
+			fill: #f44d51;
+			opacity: 1;
+			
 		}
 	}
 
@@ -108,4 +125,7 @@
 	background-color: rgba($color: #fff, $alpha: 0.2);
 	border-radius: $border-radius;
 	border-color: transparent;
+	.popover-arrow{
+		display: none !important;
+	}
 }
