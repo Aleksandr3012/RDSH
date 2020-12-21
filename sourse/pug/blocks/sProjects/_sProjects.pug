@@ -45,7 +45,7 @@ mixin projectItem(i,date,dr,title,ar,sl)
 					+e.btn(href="#") Подать заявку
 
 
-mixin sProjects-main(data)
+mixin sProjects-main(t="Проекты")
 	// start sProjects
 	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
 		.container
@@ -53,7 +53,7 @@ mixin sProjects-main(data)
 			+b.filter
 				+e.main
 					
-					h2 Проекты
+					h1= t
 					+e.quantly(style="background-color: #fc5454") 57
 					+e.radioWrap
 						+e.radio.form-check.form-switch

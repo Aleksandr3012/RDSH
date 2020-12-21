@@ -1,0 +1,51 @@
+
+// start .sStructure
+.sStructure {
+		&__item{
+			padding: rem(30);
+		}
+
+	&__item,
+	&__item-h{
+		height: calc(100% - var(--bs-gutter-x));
+		margin-bottom: var(--bs-gutter-x);
+
+	}
+	&__item-h{
+		text-align: center;
+		padding: rem(20);
+		p{
+			font-size: $small;
+		}
+		p{
+			font-size: $small;
+		}
+	}
+	&__img-wrap{
+		height: rem(143);
+		vertical-align: middle;
+		line-height: rem(143);
+		background-color: #ffffff;
+		margin-bottom: rem(19);
+		border-radius: rem(20);
+	}
+	&__title{
+		display: inline-block;
+		font-weight: 500;
+		padding: rem(15) rem(19);
+		background-color: rgba($color: #fff, $alpha: .09);
+		margin-bottom: rem(20);
+		border-radius: rem(50);
+
+	}
+	@include media-breakpoint-up(xl) {
+
+		.row--lg{
+			--bs-gutter-x: 40px;
+		}
+	}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sStructure

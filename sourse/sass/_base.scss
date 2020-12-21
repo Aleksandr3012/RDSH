@@ -138,6 +138,10 @@ body {
 
 .section-title {
 	padding-bottom: var(--sTPB);
+	h1{
+		@extend .h2;
+
+	}
 }
 
 
@@ -179,10 +183,15 @@ body {
 }
 
 .row--sm {
-	@include roww(10)
+	@include roww(20px);
 }
 
+.row--lg{
+		@include media-breakpoint-up(xl) {
 
+			--bs-gutter-x: 40px
+		}
+}
 
 .slick-slide img {
 	display: inline
