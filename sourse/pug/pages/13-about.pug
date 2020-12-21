@@ -8,6 +8,7 @@ include ../blocks/sProjectInner/_sProjectInner.pug
 include ../blocks/sOtherProjects/_sOtherProjects.pug
 include ../blocks/sSchools/_sSchools.pug
 include ../blocks/sSchoolHead/_sSchoolHead.pug
+include ../blocks/sAbout/_sAbout.pug
 
 block variables
 	- let  mainPage= 'bg'
@@ -24,8 +25,7 @@ block pagecontent
 			}
 		+header()
 			+topLine()
-		+sSchoolHead
-		+sSchools2
+		+sAbout
 	//- +sForm()
 	//- +sContact()
 	//- +footer()

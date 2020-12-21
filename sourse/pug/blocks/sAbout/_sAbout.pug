@@ -1,0 +1,46 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes) 
+		.container
+			+pic("about-img.png")
+			.section__inner
+				+b.section-title.text-center
+					.row.align-items-center
+						.col-auto
+							h1 О движении
+						.col-auto
+							+e.label Устав движения
+				.row
+					mixin item(t,p)
+						+e.col.col-xl-3.col-sm-6
+							+e.item
+								+e.title= t
+								p= p
+					+item('Более 15 000','Участников РДШ')
+					+item('Более 1 000','Первичных отделений')
+					+item('Более 2 000','Местных отделений')
+					+item('Более 500','Успешных проектов')
+				.small.pb-5 Российское движение школьников (РДШ) — Общероссийская общественно-государственная детско-юношеская организация, деятельность которой направлена на воспитание подрастающего поколения, развитие детей на основе их интересов и потребностей, а также организацию досуга и занятости школьников. РДШ как общественно-государственная детско-юношеская организация для всех школьников страны является важной составляющей системы воспитания образовательной организации в части воспитания высоконравственных, социально успешных граждан. 29 октября 2015 года Президент Российской Федерации Владимир Владимирович Путин подписал Указ № 536 «О создании общероссийской общественно-государственной детско-юношеской организации «Российское движение школьников».
+				.row.row--lg
+					mixin item(i,t)
+						+e.col.col-lg-6
+							+e.item
+								.row
+									.col-sm-auto
+										+e.img-wrap
+											img(src=`img/svg/about-i-${i}.svg`, alt="")
+									.col
+										+e.title-sm!= t
+										p.mb-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+										block
+					+item(`1`,`Для кого?`,``)
+					+item(`2`,`Почему с нами круто?`,``)
+					+item(`3`,`С чего начать знакомство?`,``)
+						.row.row--sm
+							.col-auto
+								a.btn.btn-white.mb-3(href="#") Проекты
+							.col-auto
+								a.btn.btn-white.mb-3(href="#") Направления
+					+item(`4`,`Как вступить в РДШ?`,``)
+							a.btn.btn-white.mb-3(href="#") Заполнить анкету
+	// end sAbout
