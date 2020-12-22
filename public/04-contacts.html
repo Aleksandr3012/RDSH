@@ -54,12 +54,10 @@
 											<div class="topLine__search">
 												<div class="topLine__input-wrap form-group"><input class="topLine__input form-control" name="search" type="search" placeholder="Поиск на сайте…"/>
 												</div>
-												<!-- +e.input-wrap-->
-												<button class="topLine__btnSearch" type="submit">
-													<svg class="icon icon-search ">
-														<use xlink:href="img/svg/sprite.svg#search"></use>
-													</svg>
-												</button>
+												<!-- +e.input-wrap--><a class="topLine__btnSearch link-modal" href="#modal-search-result">
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg></a>
 											</div>
 										</div>
 										<div class="col-auto"><a class="topLine__user" href="#">
@@ -425,6 +423,66 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<!-- modal-search-result-->
+		<div class="modal-win" id="modal-search-result" style="display: none">
+			<div class="container">
+				<div class="modal-win__search">
+					<div class="modal-win__input-wrap form-group"><input class="modal-win__input form-control" name="search" type="search" placeholder="Поиск на сайте…"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="modal-win__btnSearch" type="submit">
+						<svg class="icon icon-search ">
+							<use xlink:href="img/svg/sprite.svg#search"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-win__row row">
+					<div class="col-lg-6"><a class="resultItem" href="#"><span class="resultItem__subtitle">Проект – Личностное развитие – 21.08.2020</span><span class="resultItem__title">Всероссийский проект “В Порядке”</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></a>
+					</div>
+					<div class="col-lg-6"><a class="resultItem" href="#"><span class="resultItem__subtitle">Проект – Личностное развитие – 21.08.2020</span><span class="resultItem__title">Фестиваль театрализованных представлений для обучающихся начальных классов</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></a>
+					</div>
+					<div class="col-lg-6"><a class="resultItem" href="#"><span class="resultItem__subtitle">Проект – Личностное развитие – 21.08.2020</span><span class="resultItem__title">Всероссийский проект «Информационная культура и безопасность», 2020-2021 год</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></a>
+					</div>
+					<div class="col-lg-6"><a class="resultItem" href="#"><span class="resultItem__subtitle">Проект – Личностное развитие – 21.08.2020</span><span class="resultItem__title">Творческая мастерская РДШ</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></a>
+					</div>
+					<div class="col-lg-6"><a class="resultItem" href="#"><span class="resultItem__subtitle">Проект – Личностное развитие – 21.08.2020</span><span class="resultItem__title">Фестиваль театрализованных представлений для обучающихся начальных классов</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></a>
+					</div>
+					<div class="col-lg-6"><a class="resultItem" href="#"><span class="resultItem__subtitle">Проект – Личностное развитие – 21.08.2020</span><span class="resultItem__title">Всероссийский проект “В Порядке”</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></a>
+					</div>
+				</div>
+				<div class="pagination-wrapper">
+					<ul class="page-numbers">
+								<li><a class="disabled prev page-numbers" href="#">
+										<svg class="icon icon-prev ">
+											<use xlink:href="img/svg/sprite.svg#prev"></use>
+										</svg></a>
+								</li>
+								<li><span class="page-numbers current"> 1</span>
+								</li>
+								<li><a class="page-numbers" href="#">2</a>
+								</li>
+								<li><a class="page-numbers" href="#">...</a>
+								</li>
+								<li><a class="page-numbers" href="#">8</a>
+								</li>
+								<li><a class="page-numbers" href="#">9</a>
+								</li>
+								<li><a class="next page-numbers" href="#">
+										<svg class="icon icon-next ">
+											<use xlink:href="img/svg/sprite.svg#next"></use>
+										</svg></a>
+								</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- modal-search-result-->
 		<!-- end modals-->
 		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="libs/plyr/plyr.css"/>

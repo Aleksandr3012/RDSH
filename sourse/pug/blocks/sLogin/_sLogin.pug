@@ -1,0 +1,95 @@
+mixin sLogin(data)
+	// start sLogin
+	+b.SECTION.sLogin.section#sLogin&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Вход
+			.section__inner
+				form
+					input(name='example-input-field', type='hidden')
+					input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+					input(class='utm_source' name='utm_source' type="hidden")
+					input(class='utm_term' name='utm_term' type="hidden")
+					input(class='utm_medium' name='utm_medium' type="hidden")
+					input(class='utm_campaign' name='utm_campaign' type="hidden")
+					+input('Введите ваш e-mail','email')
+					+input('Введите ваш пароль','password')
+					.text-center
+						+e.btn(type="submit") Войти
+						+e.row.row.align-items-center.justify-content-center
+							.col-auto
+								+e.btnLight(href="#") Регистрация
+							.col-auto
+								+e.btnLight(href="#") Восстановление пароля
+				
+	// end sLogin
+
+mixin sLogin-forgot(data)
+	// start sLogin
+	+b.SECTION.sLogin.section#sLogin&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Забыли пароль?
+			.section__inner
+				form
+					input(name='example-input-field', type='hidden')
+					input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+					input(class='utm_source' name='utm_source' type="hidden")
+					input(class='utm_term' name='utm_term' type="hidden")
+					input(class='utm_medium' name='utm_medium' type="hidden")
+					input(class='utm_campaign' name='utm_campaign' type="hidden")
+					+input('Введите ваш e-mail','email')
+					.text-center 
+						+e.btn(type="submit") Отправить
+						p На&nbsp;указаную почту будет отправлена ссылка для&nbsp;восстановления пароля.
+
+						+e.row.row.align-items-center.justify-content-center
+							.col-auto
+								+e.btnLight(href="#") Вход
+							.col-auto
+								+e.btnLight(href="#") Регистрация
+				
+
+mixin sLogin-reg(data)
+	// start sLogin
+	+b.SECTION.sLogin.section#sLogin&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Регистрация
+			.section__inner
+				form
+					input(name='example-input-field', type='hidden')
+					input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+					input(class='utm_source' name='utm_source' type="hidden")
+					input(class='utm_term' name='utm_term' type="hidden")
+					input(class='utm_medium' name='utm_medium' type="hidden")
+					input(class='utm_campaign' name='utm_campaign' type="hidden")
+					+e.sm Дата рождения
+					+e.row.row
+						.col-sm
+							+input('День','select')
+						.col-sm
+							+input('Месяц','select')
+						.col-sm
+							+input('Год','select')
+					.text-center 
+						+e.btn.mb-2(type="submit") Далее
+
+mixin sLogin-reg-2(data)
+	// start sLogin
+	+b.SECTION.sLogin.section#sLogin&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Регистрация
+			.section__inner
+				form
+					input(name='example-input-field', type='hidden')
+					input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+					input(class='utm_source' name='utm_source' type="hidden")
+					input(class='utm_term' name='utm_term' type="hidden")
+					input(class='utm_medium' name='utm_medium' type="hidden")
+					input(class='utm_campaign' name='utm_campaign' type="hidden")
+
+					+input('Выберите статус','select')
+					.text-center 
+						+e.btn.mb-0(type="submit") Далее

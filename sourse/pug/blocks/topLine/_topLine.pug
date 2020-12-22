@@ -17,11 +17,13 @@ mixin topLine()
 							.col-auto.d-none.d-lg-block
 								+e.search
 									+input('Поиск на сайте…','search')
-									+e.btnSearch(type="submit")
+									+e.btnSearch.link-modal(href="#modal-search-result")
 										+icon('search')
 							.col-auto
 								+e.user(href="#")
 									+icon('user')
+									//- +e.userImg
+									//- 	img.res-i(src="img/@1x/person-1.jpg", alt="")
 									span.d-none.d-md-inline Вход
 							.col-auto
 								+e.mnu

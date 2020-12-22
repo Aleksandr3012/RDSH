@@ -11,7 +11,8 @@
 	}
 
 	&__user {
-		display: block;
+		display: flex;
+		align-items: center;
 		border-radius: $border-radius;
 		background-color: rgba($color: #fff, $alpha: 0.12);
 		text-decoration: none !important;
@@ -43,6 +44,21 @@
 			@include media-breakpoint-up(md) {
 				margin-right: rem(12);
 			}
+		}
+	}
+
+	&__userImg {
+		max-width: rem(30);
+		max-height: rem(30);
+		@include media-breakpoint-up(xl) {
+			max-width: rem(44);
+			max-height: rem(44);
+		}
+		flex-shrink: 0;
+		border-radius: 50%;
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			margin-right: rem(10);
 		}
 	}
 

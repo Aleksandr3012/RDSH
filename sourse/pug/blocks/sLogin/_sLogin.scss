@@ -1,0 +1,78 @@
+
+// start .sLogin
+.sLogin {
+	@include media-breakpoint-up(sm) {
+		--sPL: #{rem(41)};
+		--sPL: #{rem(41)};
+		--sPT: #{rem(35)};
+	}
+	@include media-breakpoint-up(xxl) {
+		padding-top: 12vh;
+	}
+	.section__inner {
+		max-width: rem(480);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__row {
+		@include roww(15px);
+	}
+
+	.form-group {
+		margin-bottom: rem(20);
+	}
+
+	&__input {
+		text-align: center;
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-white;
+		background-color: #fff;
+		color: $cyan;
+		font-weight: 500;
+		margin-top: rem(10);
+		margin-bottom: rem(30);
+	}
+
+	&__btnLight {
+		@extend .btn;
+		@extend .btn-white;
+		white-space: nowrap;
+		font-size: $small;
+		background-color: rgba($color: #fff, $alpha: 0.15);
+		@include media-breakpoint-up(sm) {
+			padding-left: rem(26);
+			padding-right: rem(26);
+		}
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	p {
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(30);
+		}
+	}
+
+	&__sm {
+		font-size: $small;
+		text-align: center;
+		margin-bottom: rem(20);
+	}
+
+	.form-select {
+		padding-left: rem(20);
+		padding-right: rem(25);
+		background-position: right .5rem center;
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sLogin

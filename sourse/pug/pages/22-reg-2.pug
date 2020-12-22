@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sDirections/_sDirections.pug
+include ../blocks/sLogin/_sLogin.pug
+
+block variables
+	- let  mainPage= 'bg'
+block title
+	- let  title= 'Забыли пароль?'
+	title= title
+block pagecontent
+
+	.main-wrapper()
+		style.
+			.bg {
+				
+				background: linear-gradient(-240.64deg, #5b6ceb 0%, #7bc2ff 100%);
+			}
+		+header()
+			+topLine()
+		+sLogin-reg-2()
+	//- +sForm()
+	//- +sContact()
+	//- +footer()
+
+
+	
