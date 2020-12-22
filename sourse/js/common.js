@@ -267,7 +267,6 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true,
 		},
-
 	});
 	// modal window
 	const swiperHeaderBlock = new Swiper('.mainSlider__slider--js', {
@@ -275,7 +274,7 @@ function eventHandler() {
 		slidesPerView: 2,
 		slidesPerColumn: 3,
 		spaceBetween: 0,
-		loop: true,
+		// loop: true,
 		breakpoints: {
 			576: {
 				slidesPerView: 3,
@@ -310,8 +309,8 @@ function eventHandler() {
 		loop: true,
 
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.sProjectInner .swiper-button-next',
+			prevEl: '.sProjectInner .swiper-button-prev',
 		},
 		lazy: {
 			loadPrevNext: true,

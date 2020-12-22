@@ -53,9 +53,17 @@
 		padding-top: rem(5);
 	}
 }
+.fancybox-container {
+	backdrop-filter: blur(9px);
+}
+
+.fancybox-bg {
+	background-color: rgba($color: $secondary, $alpha: 0.7) !important;
+}
 
 #modal-search-result {
-	background-color: rgba($color: #5489fc, $alpha: 0.28);
+	// background-color: rgba($color: #5489fc, $alpha: 0.28);
+	background: none;
 	width: 100vw;
 	min-height: 100vh;
 	padding: rem(45) 0;

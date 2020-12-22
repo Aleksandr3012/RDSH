@@ -16,8 +16,8 @@ html {
 
 	// overflow-x: hidden;
 	-webkit-text-size-adjust: none;
-	overflow-x: hidden;
-	overflow-y: auto;
+	// overflow-x: hidden;
+	// overflow-y: auto;
 
 	&.fixed {
 		overflow: hidden;
@@ -90,6 +90,7 @@ body {
 
 	&.fancybox-active {
 		overflow: hidden;
+
 
 	}
 

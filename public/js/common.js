@@ -271,7 +271,7 @@ function eventHandler() {
 		slidesPerView: 2,
 		slidesPerColumn: 3,
 		spaceBetween: 0,
-		loop: true,
+		// loop: true,
 		breakpoints: {
 			576: {
 				slidesPerView: 3,
@@ -304,8 +304,8 @@ function eventHandler() {
 	var swiper = new Swiper('.sProjectInner__slider--js', {
 		loop: true,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
+			nextEl: '.sProjectInner .swiper-button-next',
+			prevEl: '.sProjectInner .swiper-button-prev'
 		},
 		lazy: {
 			loadPrevNext: true,
