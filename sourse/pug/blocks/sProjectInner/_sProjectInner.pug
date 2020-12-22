@@ -5,10 +5,10 @@ mixin sProjectInner(data)
 			+e.head
 				+pic('project-bg.jpg','','')(class="picture-bg")
 				.row.align-items-center.justify-content-between
-					.col-auto
-						+e.pgojectName #[a(href="#") Проекты] – Всероссийский конкурс “Викторина Победы”
-					.col-auto
-						+e.pgojectCategory
+					.col-lg-auto
+						+e.projectName #[a(href="#") Проекты] – Всероссийский конкурс “Викторина Победы”
+					.col-lg-auto
+						+e.projectCategory
 							+e.color(style="background-color: #fc5454")
 							span Военно-патриотические
 							+e.date 21.07 – 18.08
@@ -64,69 +64,93 @@ mixin content1
 						strong По&nbsp;итогам Конкурса с&nbsp;помощью генератора случайных чисел будут отобраны 5&nbsp;человек, которые получат настольную игру &laquo;Великая Отечественная война&raquo;, а&nbsp;также смогут сыграть в&nbsp;нее очно на&nbsp;праздновании дня рождения РДШ в&nbsp;2021&nbsp;году.
 					.col-auto
 						+e.btn(href="#") Подать заявку
-				.row
-					.col-lg-6
-						+e.slider--js.swiper-container
-							.swiper-wrapper
-								mixin slide(i)
-									.swiper-slide
-										+e.imgWrap(href=`img/@2x/${i}.jpg` data-fancybox="photogalery")
-											picture.picture-bg
-												source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/${i}.webp` type="image/webp")
-												img.swiper-lazy(src="#" data-src=`img/@2x/${i}.jpg`, alt="")
+			.row
+				.col-lg-6
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							mixin slide(i)
+								.swiper-slide
+									+e.slide(href=`img/@2x/${i}.jpg` data-fancybox="photogalery")
+										picture.picture-bg
+											source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/${i}.webp` type="image/webp")
+											img.swiper-lazy(src="#" data-src=`img/@2x/${i}.jpg`, alt="")
 										+e.category Видеогалерея
 										+e.title Как прошел конкурс “Викторина победы”
-								+slide('photo-gallery')
-								+slide('banner-2')
-								+slide('project-bg-2_3')
-							.swiper-button-prev
-							.swiper-button-next
-					.col-lg-6
-						+e.video(href="https://youtu.be/LJ7qXHjxj_0" data-fancybox="video")
-							+pic('video-bg.jpg','bg','')(class="picture-bg")
-							+e.play
-								+icon('play')
-							+e.category Видеогалерея
-							+e.title Как прошел конкурс “Викторина победы”
+							+slide('photo-gallery')
+							+slide('banner-2')
+							+slide('project-bg-4')
+						+arrow
+				.col-lg-6
+					+e.video(href="https://youtu.be/LJ7qXHjxj_0" data-fancybox="video")
+						+pic('video-bg.jpg','bg','')(class="picture-bg")
+						+e.play
+							+icon('play')
+						+e.category Видеогалерея
+						+e.title Как прошел конкурс “Викторина победы”
 
 
-
+mixin nominationsItem(i,title,text)
+	.col-lg-6
+		+b.nominationsItem
+			+e.row.row
+				.col-sm-auto
+					+pic(`nominations-${i}.jpg`,'','')
+				.col
+					+e.title= title
+					p= text
 
 //- Номинации
 mixin content2
-	.tabs__content
+	.tabs__content--nominations.tabs__content
 		.section__inner
-			+b.section-title
-				h2 Номинации
-				
-			.row
+			+e.nominationsRow.row
+				+nominationsItem('1','Репортажная фотосъемка','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+				+nominationsItem('2','Творческое видео','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+				+nominationsItem('3','Видеорепортаж','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+				+nominationsItem('4','Творческая фотосъемка','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
 
 
-
+mixin resourcesItem(title)
+	+b.resourcesItem
+		+e.title(href="#")= title
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 //- Образовательные ресурсы
 mixin content3
 	.tabs__content
 		.section__inner
-			+b.section-title
-				h2 бразовательные ресурсы
-				
-			.row
+			+e.resourcesRow.row
+				.col-lg-4
+					+resourcesItem('Более длинное название ресурса')
+				.col-lg-4
+					+resourcesItem('Название ресурса')
+				.col-lg-4
+					+resourcesItem('Название ресурса')
 
 
 
-
-
+mixin taskItem(i,b,title,text)
+	+b.taskItem(href="#")
+		+pic(`task-bg-${i}.jpg`,'bg','')(class="picture-bg")
+		span
+			+e.topBlock&attributes(attributes)= b
+		+e.descr
+			+e.title!= title
+			if text
+				+e.text!= text
 
 //- Задания
 mixin content4
-	.tabs__content
+	.tabs__content--tasks.tabs__content
 		.section__inner
-			+b.section-title
-				h2 Задания
-				
 			.row
+				.col-lg-4
+					+taskItem('1','Чек-лист','УЮТНЫЙ ДОМ','На старт, внимание, ПОРЯДОК!').--white
+				.col-lg-4
+					+taskItem('2','Урок №1','СЛАДКИЕ И ПОЛЕЗНЫЕ ПЕРЕКУСЫ')
+				.col-lg-4
+					+taskItem('3','Урок №2','ОПТИМИЗАЦИЯ ПРОСТРАНСТВА')
 
 
 
@@ -138,10 +162,17 @@ mixin content4
 mixin content5
 	.tabs__content
 		.section__inner
-			+b.section-title
-				h2 Всероссийский конкурс “Викторина Победы”
-				
-			.row
+			+e.contactRow.row
+				+e.col.col-sm-auto
+					h5 Социальные сети
+					+b.soc
+						+item-sos('vk')
+				+e.col.col-sm-auto
+					h5 E-mail
+					+e.link(href="mailto:shefvshkole@myrdsh.ru") shefvshkole@myrdsh.ru
+				+e.col.col-sm-auto
+					h5 Телефон
+					+e.link(href="tel:+74951212126") +7 (495) 121-21-26
 
 
 

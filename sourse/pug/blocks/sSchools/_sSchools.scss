@@ -70,6 +70,12 @@
 	@include media-breakpoint-down(md) {
 		--swiperArrowPosition: -15px;
 	}
+
+	&--project {
+		.section__inner {
+			background: rgba($color: #4762d5, $alpha: 0.5);
+		}
+	}
 } // end.sSchools
 
 @include media-breakpoint-up(md) {

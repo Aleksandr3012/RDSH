@@ -21,7 +21,7 @@
 			padding: rem(15);
 		}
 		@include media-breakpoint-up(md) {
-			padding: rem(15) rem(20);
+			padding: rem(15) rem(15);
 		}
 		@include media-breakpoint-down(md) {
 			width: 56px;
@@ -115,7 +115,10 @@
 		padding: rem(10);
 		display: grid;
 		place-items: center;
-		margin-left: rem(20);
+		margin-left: rem(10);
+		@include media-breakpoint-up(xl) {
+			margin-left: rem(20);
+		}
 
 		.icon {
 			color: #fff;

@@ -305,6 +305,9 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.sSchools .swiper-button-next',
 			prevEl: '.sSchools .swiper-button-prev'
+		},
+		lazy: {
+			loadPrevNext: true
 		}
 	}); // modal window
 
@@ -343,7 +346,7 @@ function eventHandler() {
 		}
 	}); // modal window
 
-	var swiper = new Swiper('.swiper-container', {
+	var swiper = new Swiper('.sProjectInner__slider--js', {
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',

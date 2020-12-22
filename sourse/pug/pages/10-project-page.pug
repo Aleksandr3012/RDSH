@@ -5,7 +5,8 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sDirections/_sDirections.pug
 include ../blocks/sProjectInner/_sProjectInner.pug
-include ../blocks/sOtherProjects/_sOtherProjects.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sSchools/_sSchools.pug
 
 block variables
 	- let  mainPage= 'bg'
@@ -23,7 +24,7 @@ block pagecontent
 		+header()
 			+topLine()
 		+sProjectInner()
-		+sOtherProjects()
+		+sSchoolsProject()
 		//- +sProjects-main()
 	//- +sForm()
 	//- +sContact()

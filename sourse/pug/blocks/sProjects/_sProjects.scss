@@ -145,6 +145,18 @@
 			padding-top: rem(15);
 		}
 	}
+
+	&--slide {
+		margin-bottom: 0;
+		.projectItem__main {
+			@include media-breakpoint-up(xl) {
+				padding-right: rem(45);
+			}
+			@include media-breakpoint-up(xxxl) {
+				padding-right: rem(26);
+			}
+		}
+	}
 }//projectItem end
 
 // filter start
