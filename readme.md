@@ -20,6 +20,6 @@
 2. <https://aleksandr3012.github.io/RDSH/public/17-primary.html>
 3. <https://aleksandr3012.github.io/RDSH/public/18-local.html>
 3. <https://aleksandr3012.github.io/RDSH/public/19-entrance.html>
-3. <https://aleksandr3012.github.io/RDSH/public/20-entrance.html>
+3. <https://aleksandr3012.github.io/RDSH/public/20-forgot-pasword.html>
 3. <https://aleksandr3012.github.io/RDSH/public/21-reg.html>
 3. <https://aleksandr3012.github.io/RDSH/public/22-reg-2.html>
