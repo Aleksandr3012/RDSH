@@ -1,0 +1,114 @@
+
+// start .sDepartments
+.sDepartments {
+	&__btn-head{
+		margin-top: rem(25);
+	}
+	&__item{
+		&:last-child{
+			// padding-bottom: 0;
+			margin-bottom: 0 !important;
+		}
+	}
+	&__item-body{
+		a{
+			color: #0c6dc2;
+		}
+		ul{
+			font-size: $small;
+			list-style: none;
+			@include media-breakpoint-up(xxl) {
+				columns: 4;
+			}
+			
+			@include media-breakpoint-up(md) {
+				columns: 3;
+			}
+			
+		}
+	}
+	&__col-ul{
+		position: relative;
+		li{	
+			list-style: none;
+			margin-bottom: rem(10); 
+		}
+			@include media-breakpoint-up(xl){
+
+				&::after{
+					content: '';
+					position: absolute;
+					height: 100%;
+					right: 15px;
+					width: 1px;
+					height: 100%;
+					background-color: #ffffff;
+					opacity: 0.3;
+					top: 0;
+				}
+			}
+		
+	}
+	&__title-lg{
+		@extend .h4;
+		margin-bottom: rem(30);
+	}
+	&__panel{
+		border-radius: 20px;
+		padding: rem(10) rem(20);
+		background-color: #ffffff;
+		color: #293377;
+		display: inline-block;
+		.row{
+			align-items: center;
+		}
+	}
+	&__count{
+		border-radius: 40px;
+		color: #ffffff;
+		background-image: linear-gradient(to bottom, $secondary 0%, $primary 100%);
+		display: inline-block;text-align: center;
+		padding: rem(2) rem(10);
+font-size: $small;
+font-weight: 500;
+	}
+
+	&__item-body{
+		display: none;
+	}
+	&__item-head{
+		padding-bottom: rem(20);
+	}
+
+	.filter__filter{
+		display: flex;
+		align-items: center;
+		padding: rem(7);
+		padding-left: rem(23);
+		background-color: rgba($color: #fff, $alpha: .15)  !important;
+		&.active .icon-wrap{
+			// transform: rotate(90deg);
+		}
+		.icon-wrap{
+			position: relative;
+			width: 36px;
+			height: 36px;
+			background-color: rgba($color: #fff, $alpha: .15);
+			border-radius: 50%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: rem(15);
+			.icon{
+				color: #ffffff;
+				font-size: rem(10);
+				margin: 0;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDepartments

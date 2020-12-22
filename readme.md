@@ -17,3 +17,5 @@
 1. <https://aleksandr3012.github.io/RDSH/public/14-events.html>
 1. <https://aleksandr3012.github.io/RDSH/public/15-structure.html>
 1. <https://aleksandr3012.github.io/RDSH/public/16-docs.html>
+2. <https://aleksandr3012.github.io/RDSH/public/17-primary.html>
+3. <https://aleksandr3012.github.io/RDSH/public/18-local.html>
