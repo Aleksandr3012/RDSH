@@ -55,7 +55,7 @@
 }
 
 #modal-search-result {
-	background-color: rgba($color: #fff, $alpha: 0.5);
+	background-color: rgba($color: #4762d5, $alpha: 0.28);
 	width: 100vw;
 	min-height: 100vh;
 	padding: rem(45) 0;
@@ -191,7 +191,7 @@ a {
 	}
 
 	&:hover {
-		background-color: rgba($color: #293377, $alpha: 0.2);
+		background-color: rgba($color: #000, $alpha: 0.2);
 	}
 
 	&__subtitle {
