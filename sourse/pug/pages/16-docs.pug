@@ -8,12 +8,12 @@ include ../blocks/sProjectInner/_sProjectInner.pug
 include ../blocks/sOtherProjects/_sOtherProjects.pug
 include ../blocks/sSchools/_sSchools.pug
 include ../blocks/sSchoolHead/_sSchoolHead.pug
-include ../blocks/sStructure/_sStructure.pug
+include ../blocks/sDoc/_sDoc.pug
 
 block variables
 	- let  mainPage= 'bg'
 block title
-	- let  title= 'Структура'
+	- let  title= 'Документы'
 	title= title
 block pagecontent
 
@@ -25,7 +25,7 @@ block pagecontent
 			}
 		+header()
 			+topLine()
-		+sStructure
+		+sDoc
 	//- +sForm()
 	//- +sContact()
 	//- +footer()

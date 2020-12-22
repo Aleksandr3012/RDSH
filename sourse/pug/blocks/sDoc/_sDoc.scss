@@ -1,0 +1,35 @@
+
+// start .sDoc
+.sDoc {
+	// @extend .sSchools;
+	.form-select{
+		@include media-breakpoint-up(xl) {
+
+			width: rem(285);
+		}
+	}
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		.row{
+			margin-top: auto;
+		}
+		.btn{
+			background-color: #ffffff;
+			color: $primary;
+		}
+	}
+	&__label{
+		font-size: rem(14);
+		display: inline-block;
+		margin-right: rem(5);
+		padding: rem(2) rem(10);
+		background-color: rgba($color: #fff, $alpha: .15);
+		border-radius: rem(10);
+	}
+
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDoc

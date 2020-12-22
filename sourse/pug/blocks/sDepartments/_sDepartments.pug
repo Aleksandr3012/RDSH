@@ -1,0 +1,246 @@
+mixin sDepartments(data)
+	// start sDepartments
+	+b.SECTION.sDepartments.section#sDepartments&attributes(attributes)
+		.container 
+			+e.head.section__inner
+				.row.pb-4
+					.col-xxl-auto
+						h1 Местные отделения
+					.col-auto
+						a.btn.btn-success(href="#") Зарегистрировать
+				
+				.row 
+					+e.col.col-xl
+						+input('Не выбрано','select','Регион')
+					+e.col.col-xl
+						+input('Введите название…','text','Название организации')
+					.col-auto
+						+e.btn-head.btn-white(type="button") Найти
+			.section__inner
+				mixin item(t)
+					+e.item.section__inner.accardion-block
+						+e.item-head
+							+e.title-lg Муниципальное автономное учреждение дополнительного образования “Центр детского творчества”
+							.row
+								.col.mt-3
+									+e.panel.small
+										.row
+											.col-lg-auto.fw-500 Свердловская обл.
+											.col-md.text-lg-center
+												span.fw-500 Создано:
+												|  12 февр. 2020 г.
+											.col-md-auto.row
+												.col-auto.fw-500 Членов РДШ
+												.col-auto
+													+e.count 50 
+								.col-lg-auto.mt-3
+									button.btn.btn-white.filter__filter.accardionToggle.accardionToggle--js Подробнее
+										span.icon-wrap
+											+icon("chevron-down")
+						+e.item-body.section__inner.accardion_hidden-js
+							.row
+								.col-xl-4.col-lg-auto.order-lg-last.pb-5
+									.h6.mb-4 Председатель
+									.small 
+										span.fw-500 Анастасия Бабушкина
+									.small 
+										span.fw-500 Рабочий телефон:
+										| 
+										a(href="tel:+7962310-00-52") +7 962 310-00-52
+									.small 
+										span.fw-500 Электронная почта:
+										| 
+										a(href="mailto:nastic77@mail.ru") nastic77@mail.ru
+								block
+				+item()
+					+e.col-ul.col
+						.h6.mb-4 Участники
+						ul
+							li Жанна Самойлова
+							li Диана Легина
+							li Юлия Пономарева
+							li Максим Виноградов
+							li Иван Столяров
+							li Софья Алексашина
+							li Глеб Исупов
+							li Лидия Русакова
+							li Миррина Рашева
+							li Анна Маркова
+							li Виктория Пономарева
+							li Дарья Легина
+							li Юрий Летошников
+							li Анфиса Мелехова
+							li Юлия Пекишева
+							li Анастасия Кукина
+							li Екатерина Волосевич
+							li Виктория Дунаенко
+							li Александра Гуляева
+							li Диана Легина
+							li Роман Козлов
+							li Юрий Беркела
+							li Александр Литвинов
+							li Елена Ушакова
+							li Олеся Пьянкова
+							li Сергей Бархатный
+							li Дарья Алексашина
+							li Тимур Анисимов
+							li Жанна Самойлова
+							li Данил Столяров
+							li Елизавета Ушакова
+							li Анна Маркова
+							li Иван Шлидт
+							li Виолетта Пьянкова
+							li Артем Легин
+							li Алина Шонбина
+							li Анна Сахарова
+							li Капитолина Кобелева
+							li Никита Новокшонов
+							li Алина Коренькова
+							li Наталья Легина
+							li Ирина Рубцова
+							li Ирина Федотовских
+							li Юлия Савочкина
+							li Миррина Рашева
+							li Наталья Маркова
+							li Анна Пекишева
+							li Степан Колесов
+							li Ольга Копытова
+							li Александра Караим
+				+item()
+				+item()
+				+item()
+
+				+item()
+				+item()
+				+item()
+				+item()
+				+item()
+				+item()
+		+pugin
+	// end sDepartments
+
+
+mixin sDepartmentsLocal(data)
+	// start sDepartments
+	+b.SECTION.sDepartments.section#sDepartments&attributes(attributes)
+		.container 
+			+e.head.section__inner
+				.row.pb-4
+					.col-xxl-auto
+						h1 Первичные отделения
+					.col-auto
+						a.btn.btn-success(href="#") Зарегистрировать
+				
+				.row 
+					+e.col.col-xl
+						+input('Не выбрано','select','Регион')
+					+e.col.col-xl
+						+input('Введите название…','text','Название организации')
+					.col-auto
+						+e.btn-head.btn-white(type="button") Найти
+			.section__inner
+				mixin item(t)
+					+e.item.section__inner.accardion-block
+						+e.item-head
+							+e.title-lg Муниципальное автономное учреждение дополнительного образования “Центр детского творчества”
+							.row
+								.col.mt-3
+									+e.panel.small
+										.row
+											.col-lg-auto.fw-500 Свердловская обл.
+											.col-md.text-lg-center
+												span.fw-500 Создано:
+												|  12 февр. 2020 г. 
+											.col-md-auto.row
+												.col-auto.fw-500 Членов РДШ
+												.col-auto
+													+e.count 50
+											.col-md-auto.row
+												.col-auto.fw-500 Первичных отделений
+												.col-auto
+													+e.count 50
+								.col-lg-auto.mt-3
+									button.btn.btn-white.filter__filter.accardionToggle.accardionToggle--js Подробнее
+										span.icon-wrap
+											+icon("chevron-down")
+						+e.item-body.section__inner.accardion_hidden-js
+							.row
+								.col-xl-4.col-lg-auto.order-lg-last.pb-5
+									.h6.mb-4 Председатель
+									.small 
+										span.fw-500 Анастасия Бабушкина
+									.small 
+										span.fw-500 Рабочий телефон:
+										| 
+										a(href="tel:+7962310-00-52") +7 962 310-00-52
+									.small 
+										span.fw-500 Электронная почта:
+										| 
+										a(href="mailto:nastic77@mail.ru") nastic77@mail.ru
+								block
+				+item()
+					+e.col-ul.col
+						.h6.mb-4 Участники
+						ul
+							li Жанна Самойлова
+							li Диана Легина
+							li Юлия Пономарева
+							li Максим Виноградов
+							li Иван Столяров
+							li Софья Алексашина
+							li Глеб Исупов
+							li Лидия Русакова
+							li Миррина Рашева
+							li Анна Маркова
+							li Виктория Пономарева
+							li Дарья Легина
+							li Юрий Летошников
+							li Анфиса Мелехова
+							li Юлия Пекишева
+							li Анастасия Кукина
+							li Екатерина Волосевич
+							li Виктория Дунаенко
+							li Александра Гуляева
+							li Диана Легина
+							li Роман Козлов
+							li Юрий Беркела
+							li Александр Литвинов
+							li Елена Ушакова
+							li Олеся Пьянкова
+							li Сергей Бархатный
+							li Дарья Алексашина
+							li Тимур Анисимов
+							li Жанна Самойлова
+							li Данил Столяров
+							li Елизавета Ушакова
+							li Анна Маркова
+							li Иван Шлидт
+							li Виолетта Пьянкова
+							li Артем Легин
+							li Алина Шонбина
+							li Анна Сахарова
+							li Капитолина Кобелева
+							li Никита Новокшонов
+							li Алина Коренькова
+							li Наталья Легина
+							li Ирина Рубцова
+							li Ирина Федотовских
+							li Юлия Савочкина
+							li Миррина Рашева
+							li Наталья Маркова
+							li Анна Пекишева
+							li Степан Колесов
+							li Ольга Копытова
+							li Александра Караим
+				+item()
+				+item()
+				+item()
+
+				+item()
+				+item()
+				+item()
+				+item()
+				+item()
+				+item()
+		+pugin
+	// end sDepartments

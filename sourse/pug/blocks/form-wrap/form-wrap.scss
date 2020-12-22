@@ -1,5 +1,12 @@
+
+.form-group {
+	 label {
+	 	display: block;
+	 }
+}
 .form-wrap{
  	&__input-wrap{
+		
 			// @extend .form-group;
 			
 		}

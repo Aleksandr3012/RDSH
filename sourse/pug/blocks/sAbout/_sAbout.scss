@@ -58,6 +58,8 @@
 	&__label{
 		display: inline-block;
 		font-weight: 500;
+		color: #ffffff !important; 
+		text-decoration: none !important; 
 		 background-image: linear-gradient(to right, #f77 0%, #f02e2e 100%);
 		 @include media-breakpoint-up(sm) {
 
