@@ -338,6 +338,12 @@ function eventHandler() {
 			placement: 'auto'
 		});
 	});
+	var file = $(".add-file input[type=file]");
+	file.change(function () {
+		var filename = $(this).val().replace(/.*\\/, "");
+		var name = $(".add-file__filename  ");
+		name.text('Файл успешно загружен');
+	});
 }
 
 ;
