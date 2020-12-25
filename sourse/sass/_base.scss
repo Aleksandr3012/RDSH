@@ -532,3 +532,7 @@ option{
 		@extend .invisible;
 	}
 }
+
+select.form-control{
+	@extend .form-select;
+}

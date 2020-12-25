@@ -358,6 +358,11 @@ function eventHandler() {
 
 	});
 
+	$('select.form-control, select.form-select').select2({
+		theme: 'bootstrap4',
+		language: "ru"
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

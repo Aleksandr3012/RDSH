@@ -246,32 +246,63 @@ input::-webkit-inner-spin-button {
 
 
 
-.select2-container--default{
-	display: block;
-	outline: 0 !important; 
-	.select2-selection--single{
-		border-radius: 0;
-		border: none;
-		border-bottom: solid 1px ;
-		height: auto;
-		font-size: rem(24px);
-		outline: 0 !important; 
-		.select2-selection__arrow b{
-				border-color: $success transparent transparent transparent;
-			  border-style: solid;
-			  border-width: 7px 7px 0 7px;
-		}
-		.select2-selection__rendered{
-			white-space: normal; 
-			 padding-left: 0;
-			 padding-bottom: 5px;
-		}
-	}
-} 
-.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
-	border-color: transparent transparent $success transparent;
-  border-width: 0 7px 7px 7px;
+// .select2-container--default{
+// 	display: block;
+// 	outline: 0 !important; 
+// 	.select2-selection--single{
+// 		border-radius: 0;
+// 		border: none;
+// 		border-bottom: solid 1px ;
+// 		height: auto;
+// 		font-size: rem(24px);
+// 		outline: 0 !important; 
+// 		.select2-selection__arrow b{
+// 				border-color: $success transparent transparent transparent;
+// 			  border-style: solid;
+// 			  border-width: 7px 7px 0 7px;
+// 		}
+// 		.select2-selection__rendered{
+// 			white-space: normal; 
+// 			 padding-left: 0;
+// 			 padding-bottom: 5px;
+// 		}
+// 	}
+// } 
+// .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+// 	border-color: transparent transparent $success transparent;
+//   border-width: 0 7px 7px 7px;
+// }
+// .select2-container--default .select2-results__option--highlighted[aria-selected]{
+// 	background-color: $success;
+// }
+
+.select2{
+	width: 100% !important;
 }
-.select2-container--default .select2-results__option--highlighted[aria-selected]{
-	background-color: $success;
+.selection{
+	display: block;
+}
+
+.select2-selection{
+	@extend .form-select;
+	display: block;
+	height: auto !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{
+	padding: 0;
+}
+
+.select2-dropdown{
+	background-color: #5b6ceb;
+}
+.select2-search__field{
+	background-color: transparent;
+	border: 1px solid #fff;
+	outline: transparent;
+	color: #ffffff;
+}
+
+.select2-results__option--highlighted{
+	background-color: $primary;
 }
