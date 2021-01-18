@@ -93,3 +93,85 @@ mixin sLogin-reg-2(data)
 					+input('Выберите статус','select')
 					.text-center 
 						+e.btn.mb-0(type="submit") Далее
+
+mixin sLogin-reg-3(data)
+	// start sLogin
+	+b.SECTION.sLogin.section#sLogin&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Регистрация
+			.section__inner
+				form
+					input(name='example-input-field', type='hidden')
+					input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+					input(class='utm_source' name='utm_source' type="hidden")
+					input(class='utm_term' name='utm_term' type="hidden")
+					input(class='utm_medium' name='utm_medium' type="hidden")
+					input(class='utm_campaign' name='utm_campaign' type="hidden")
+
+					+input('Федеральный округ','select')
+					+input('Регион','select')
+					+input('Населенный пункт','text')
+					+input('Название улицы','text').is-valid
+					+input('Номер дома','text').is-invalid
+					+input('Выберите школу','text')
+					.text-center 
+						+e.btn.mb-0(type="submit") Завершить регистрацию
+mixin sLogin-reg-4(data)
+	// start sLogin
+	+b.SECTION.sLogin.section#sLogin&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Регистрация
+			.section__inner.section__inner--lg
+				form
+					input(name='example-input-field', type='hidden')
+					input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+					input(class='utm_source' name='utm_source' type="hidden")
+					input(class='utm_term' name='utm_term' type="hidden")
+					input(class='utm_medium' name='utm_medium' type="hidden")
+					input(class='utm_campaign' name='utm_campaign' type="hidden")
+					.row
+						.col-lg-4
+							+input('Фамилия','text').is-invalid
+						.col-lg-4
+							+input('Имя','text')
+						.col-lg-4
+							+input('Отчество','text').is-valid
+						.col-12.small.pb-3 Персональные данные:
+						.col-lg-4
+							+input('Место рождения','text')
+						.col-lg-4
+							+input('Номер телефона','tel')
+						.col-lg-4
+							+input('Год поступления в школу','date').is-invalid
+						.col-lg-4
+							+input('Класс','text')
+						.col-lg-8
+							+input('Название школы','text')
+						.col-12.small.pb-3 Персональные данные:
+						.col-lg-4
+							+input('E-mail','email')
+						.col-lg-4
+							+input('Пароль','password')
+						.col-12
+							+b.LABEL.add-file
+								span.row
+									span.col.mb-2
+										span.add-file__filename.form-control.is-valid Выберите фотографию
+									span.col-sm-auto.mb-2
+										span.btn.btn-block.btn-white Загрузить
+								+e.INPUT.input(type="file")
+						.w-100
+						.col-lg-4
+							+e.btn.btn-block.mb-0(type="submit") Завершить регистрацию
+						.w-100.pb-3
+						.col.small
+							.row--sm.row.align-items-center
+								.col-auto Согласие на #[a.text-white(href="#") обработку персональных данных]
+								.col-auto
+									.form-check.form-switch.d-inline-block
+										label.form-check-label(for="current")
+										input.form-check-input(type="checkbox" id="current")
+						.col-auto.small
+							a(href="#").text-white Зачем нужны персональные данные? 

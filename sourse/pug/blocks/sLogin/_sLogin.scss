@@ -13,6 +13,10 @@
 		max-width: rem(480);
 		margin-left: auto;
 		margin-right: auto;
+		&--lg{
+			
+			max-width: rem(960);
+		}
 	}
 
 	&__row {
@@ -24,7 +28,7 @@
 	}
 
 	&__input {
-		text-align: center;
+		// text-align: center;
 	}
 
 	&__btn {
@@ -75,4 +79,12 @@
 	@include media-breakpoint-between(md, xl) { }
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+
+	.form-switch {
+
+		.form-check-input{
+			width: rem(61);
+			height: rem(31);
+		}
+	}
 } // end.sLogin

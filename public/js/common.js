@@ -338,6 +338,16 @@ function eventHandler() {
 			placement: 'auto'
 		});
 	});
+	var file = $(".add-file input[type=file]");
+	file.change(function () {
+		var filename = $(this).val().replace(/.*\\/, "");
+		var name = $(".add-file__filename  ");
+		name.text('Файл успешно загружен');
+	});
+	$('select.form-control, select.form-select').select2({
+		theme: 'bootstrap4',
+		language: "ru"
+	});
 }
 
 ;

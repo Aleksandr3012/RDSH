@@ -503,3 +503,36 @@ option{
 	border-color: rgba($color: #fff, $alpha: 0.05);
 	color: #ffffff;
 }
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+	border-color: #fff;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-control.is-valid,
+.was-validated .form-control:valid{
+	padding-left: calc(1.5em + #{ $input-btn-padding-x});
+	padding-right: $input-btn-padding-x;
+	background-position: rem(12) center;
+
+}
+
+.btn-block{
+	display: block;
+	width: 100%;
+}
+
+.add-file{
+	display: block;
+	width: 100%;
+	margin-bottom: rem(30);
+	input{
+		@extend .invisible;
+	}
+}
+
+select.form-control{
+	@extend .form-select;
+}
