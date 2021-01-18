@@ -248,8 +248,16 @@
 		color: #fff !important;
 		text-decoration: none !important;
 
+		img {
+			@include mt;
+		}
+
 		&:hover {
-			transform: rotate(5deg) translateY(-15px);
+			@include media-breakpoint-up(md) {
+				img {
+					transform: scale(1.1);
+				}
+			}
 		}
 	}
 }
