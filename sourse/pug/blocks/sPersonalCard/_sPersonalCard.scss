@@ -97,6 +97,10 @@
 	@include media-breakpoint-between(md, xl) { }
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+
+	.section__inner--otherPadding {
+		background-color: hsla(0,0%,100%,.1);
+	}
 } // end.sPersonalCard
 
 .section__inner--otherPadding {

@@ -3,6 +3,8 @@
 .sDepartments {
 	&__btn-head{
 		margin-top: rem(25);
+		background-color: hsla(0,0%,100%,.15);
+    border-color: hsla(0,0%,100%,.15);
 	}
 	&__item{
 		&:last-child{

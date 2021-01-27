@@ -238,11 +238,21 @@
 
 	&__slide {
 		height: calc((100% - 30px) / 3);
+		display: grid;
+		place-items: center;
 	}
 
 
 	&__item {
 		display: block;
+		@include media-breakpoint-up(sm) {
+			width: 90%;
+			height: 90%;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 75%;
+			height: 75%;
+		}
 		text-align: center;
 		// margin-bottom: rem(20);
 		color: #fff !important;
@@ -259,6 +269,10 @@
 				}
 			}
 		}
+	}
+
+	&__logo {
+		display: block;
 	}
 }
 
