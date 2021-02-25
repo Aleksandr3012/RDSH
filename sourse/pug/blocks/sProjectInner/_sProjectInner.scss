@@ -29,7 +29,8 @@
 		z-index: 2;
 		border-radius: rem(35);
 		overflow: hidden;
-		min-height: 360px;
+		@include block(1520, 270);
+		// min-height: 360px;
 		padding: rem(24) rem(30);
 		display: flex;
 		flex-direction: column;
