@@ -1,17 +1,28 @@
  
 	  
 .soc{
+	position: relative;
+	z-index: 5;
 	margin: 0 rem(-8px);
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	@include media-breakpoint-up(lg) {
+		justify-content: center;
+	}
 	&__item{
 		@extend .bg-w;
 		border-radius: 50%;
-		width: 56px;
-		height: 56px;
+		width: 27px;
+		height: 27px;
+		@include media-breakpoint-up(lg) {
+			width: 56px;
+			height: 56px;
+		}
 		text-decoration: none !important;
-		margin: 0 rem(8px) rem(8);
+		margin: 0 rem(4px);
+		@include media-breakpoint-up(md) {
+			margin: 0 rem(8px) rem(8);
+		}
 		display: grid;
 		place-items: center;		
 		@include mt;
@@ -22,7 +33,10 @@
 		
 	}
 	.icon{
-	font-size: rem(25);
+		font-size: rem(14);
+		@include media-breakpoint-up(lg) {
+		font-size: rem(25);
+	}
 	color: #fff;
 	}
 	 

@@ -6,22 +6,32 @@
 	margin-bottom: 0;
 	max-width: 100%;
 	flex-wrap: wrap;
+	@extend .row;
+	margin-bottom: rem(20);
 	@include media-breakpoint-up(md) {
-		columns: 2;
+		margin-bottom: rem(40);
 	}
-	margin-bottom: rem(40);
 
 	&__item {
 		// padding-left: 0;
 		// padding-right: 0;
+		@extend .col-6;
 	}
 	&__link{
 		display: inline-block;
 		// text-align: center;
-		padding: rem(10) rem(0);
+		padding: rem(6) rem(0);
+		@include media-breakpoint-up(md) {
+			padding: rem(10) rem(0);
+		}
 		color: #fff !important;
 		position: relative;
 		text-decoration: none;
+		@include media-breakpoint-down(md) {
+			font-size: rem(14);
+			text-decoration: underline;
+
+		}
 
 		&:hover {
 			text-decoration: underline;

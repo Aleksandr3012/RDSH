@@ -9,10 +9,10 @@ mixin topLine()
 							img.res-i(src="img/svg/logo.svg", alt="")
 					.col-auto
 						+e.row.row.align-items-center
-							+e.col.col-auto.d-none.d-lg-flex
-								+e.audio-wrap
+							+e.col.col-auto.accardion-block
+								+e.audio-wrap.accardion_hidden-js
 									<audio class="audio-js" src="audio/radio_tapok.mp3" controls="controls"></audio>
-								+e.radioBtn(type="button")
+								+e.radioBtn.d-lg-none.accardionToggle--js(type="button")
 									+icon('radio')
 							.col-auto.d-none.d-lg-block
 								+e.search

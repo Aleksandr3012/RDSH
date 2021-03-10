@@ -268,19 +268,11 @@ function eventHandler() {
 
 	var swiperHeaderBlock = new Swiper('.mainSlider__slider--js', {
 		// ...defaultSl,
-		slidesPerView: 2,
+		slidesPerView: 4,
 		slidesPerColumn: 3,
 		spaceBetween: 0,
 		// loop: true,
 		breakpoints: {
-			576: {
-				slidesPerView: 3,
-				slidesPerColumn: 3
-			},
-			768: {
-				slidesPerView: 4,
-				slidesPerColumn: 3
-			},
 			992: {
 				slidesPerView: 3,
 				slidesPerColumn: 3

@@ -54,8 +54,8 @@ html {
 
 
 body {
-	min-width: 320px;
-
+	min-width: 380px;
+	-webkit-font-smoothing: antialiased;
 	position: relative;
 	@include mt;
 
