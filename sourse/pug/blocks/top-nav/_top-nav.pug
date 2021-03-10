@@ -11,9 +11,9 @@ mixin mob-mnu()
 	+b.toggle-menu-mobile--js
 		span
 	+b.menu-mobile--js
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
+			+b.toggle-menu-mobile--js
+				span
 			.d-lg-none
 				+e.search
 					+input('Поиск на сайте…','search')

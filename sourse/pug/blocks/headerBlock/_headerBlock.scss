@@ -106,9 +106,12 @@
 
 	&__calendar {
 		background-color: #fff;
-		border-radius: $border-radius;
 		padding: rem(10);
+		border-radius: rem(20);
 		max-width: 120px;
+		@include media-breakpoint-up(md) {
+			border-radius: $border-radius;
+		}
 		@include media-breakpoint-up(sm) {
 			padding: rem(17);
 			max-width: 157px;
@@ -294,8 +297,7 @@
 	@include media-breakpoint-down(lg) {
 		margin-bottom: rem(40);
 	}
-	max-height: rem(220);
-	max-height: rem(300);
+	max-height: calc(#{rem(130)} + 33vw);
 	@include media-breakpoint-up(sm) {
 	}
 	@include media-breakpoint-up(md) {
@@ -308,7 +310,7 @@
 	width: 100%;
 
 	h6 {
-		margin-top: rem(-15);
+		margin-top: rem(-10);
 		font-weight: 400;
 		@include media-breakpoint-down(md) {
 			font-size: rem(12);
@@ -328,11 +330,11 @@
 
 	&__slide {
 		height: calc((100% - 30px) / 2);
+		display: flex;
+		justify-content: center;
 		@include media-breakpoint-up(lg) {
 			height: calc((100% - 30px) / 3);
 		}
-		display: grid;
-		place-items: center;
 	}
 
 
