@@ -35,9 +35,12 @@
 			transform: rotate(90deg);
 		}
 	}
-	
+
 	&__accardion {
-		min-height: rem(100);
+		min-height: rem(63);
+		@include media-breakpoint-up(md) {
+			min-height: rem(100);
+		}
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -55,6 +58,7 @@
 				&::before, &::after {
 					background-color: $red;
 				}
+
 				&::after {
 					transform: none;
 				}
@@ -63,7 +67,10 @@
 	}
 
 	&__item {
-		margin-bottom: rem(30);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(30);
+		}
 
 		&.active {
 			.sQuestions__hiddenBlock {
@@ -73,20 +80,26 @@
 	}
 
 	&__title {
-		@extend .h5;
+		font-size: $small;
+		@include media-breakpoint-up(md) {
+			font-size: $h5-font-size;
+		}
 		line-height: 1.1;
+		font-weight: 500;
 		letter-spacing: rem(-0.2);
 		color: $cyan;
 		margin-bottom: 0 !important;
 	}
-	
+
 	p {
 		position: relative;
 		border-radius: $border-radius;
-		background-color: rgba($color: #457dff, $alpha: 0.1);
 		padding: rem(10);
 		@include media-breakpoint-up(sm) {
 			padding: rem(19) rem(27) rem(25) rem(29);
+		}
+		@include media-breakpoint-up(md) {
+			background-color: rgba($color: #457dff, $alpha: 0.1);
 		}
 		// background-image: url('../img/svg/accardion-text-bg.svg');
 		// background-size: contain;
@@ -102,6 +115,7 @@
 
 		a {
 			color: #fff;
+
 			&:hover {
 				text-decoration: none;
 			}
@@ -110,7 +124,10 @@
 		&::before {
 			content: '';
 			position: absolute;
-			right: -7.5px;
+			right: -9.5px;
+			@include media-breakpoint-up(md) {
+				right: -7.5px;
+			}
 			bottom: rem(25);
 			width: 0;
 			height: 0;
@@ -118,20 +135,21 @@
 			border-color: transparent transparent rgba($color: #457dff, $alpha: 0.1) rgba($color: #457dff, $alpha: 0.1);
 			border-radius: 4px;
 			transform: rotate(-135deg);
-			
+
 		}
 	}
 
 
 	&__hiddenBlock {
 		background-color: rgba($color: #fff, $alpha: 0.1);
-		padding: rem(30) rem(14) rem(14);
-
+		padding: rem(5);
+		margin-top: rem(20);
+		border-radius: $border-radius;
 		@include media-breakpoint-up(md) {
 			padding: rem(40) rem(28) rem(28);
+			margin-top: rem(-20);
+			border-radius: 0 0 $border-radius $border-radius;
 		}
-		margin-top: rem(-20);
-		border-radius: 0 0 $border-radius $border-radius;
 		display: none;
 
 		&--sm {
@@ -143,8 +161,14 @@
 		}
 	}
 
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) { }
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-} // end.sQuestions
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+}
+
+// end.sQuestions

@@ -59,6 +59,10 @@ body {
 	position: relative;
 	@include mt;
 
+	@include  media-breakpoint-down(md) {
+		font-size: $xsmall;
+	}
+
 	&.loaded_hiding {
 
 		opacity: 0;
