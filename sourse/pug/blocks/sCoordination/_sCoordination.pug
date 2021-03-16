@@ -50,10 +50,14 @@ mixin personBlock(img,name,descr)
 	+b.personBlock&attributes(attributes)
 		+e.row.row
 			.col-sm-auto
-				+pic(`person-${img}.jpg`,'','')
+				+e.roww.row.align-items-center
+					.col-4.col-sm-12
+						+pic(`person-${img}.jpg`,'','')
+					.col.d-sm-none
+						+e.name= name
 			.col
 				
-				+e.name= name
+				+e.name.d-none.d-sm-block= name
 				if block
 					block
 				else

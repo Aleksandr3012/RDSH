@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="186" height="186" viewBox="0 0 186 186"><defs><mask id="92u5b" width="2" height="2" x="-1" y="-1"><path fill="#fff" d="M28 23h130v130H28z"/><path d="M58 23h70c16.59 0 30 13.41 30 30v70c0 16.59-13.41 30-30 30H58c-16.59 0-30-13.41-30-30V53c0-16.59 13.41-30 30-30z"/></mask><filter id="92u5a" width="220" height="225" x="-17" y="-22" filterUnits="userSpaceOnUse"><feOffset dy="5" in="SourceGraphic" result="FeOffset1209Out"/><feGaussianBlur in="FeOffset1209Out" result="FeGaussianBlur1210Out" stdDeviation="14 14"/></filter><linearGradient id="92u5c" x1="93" x2="93" y1="23" y2="153" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#485dff"/><stop offset="1" stop-color="#417cff"/></linearGradient></defs><g><g><g filter="url(#92u5a)"><path fill="none" d="M58 23h70c16.59 0 30 13.41 30 30v70c0 16.59-13.41 30-30 30H58c-16.59 0-30-13.41-30-30V53c0-16.59 13.41-30 30-30z" mask="url(&quot;#92u5b&quot;)"/><path fill-opacity=".16" d="M58 23h70c16.59 0 30 13.41 30 30v70c0 16.59-13.41 30-30 30H58c-16.59 0-30-13.41-30-30V53c0-16.59 13.41-30 30-30z"/></g><path fill="url(#92u5c)" d="M58 23h70c16.59 0 30 13.41 30 30v70c0 16.59-13.41 30-30 30H58c-16.59 0-30-13.41-30-30V53c0-16.59 13.41-30 30-30z"/></g><g><path fill="#fff" d="M125.793 64.589v49.124c0 4.312-3.506 7.818-7.818 7.818h-51.08c-4.311 0-7.817-3.506-7.817-7.818V57.031c0-1.08.874-2.215 1.954-2.215h51.079c1.08 0 1.955.875 1.955 1.955v5.863h9.772c1.08 0 1.955.875 1.955 1.955zm-21.5 45.215H68.85c-2.587 0-2.576 3.91 0 3.91h35.443c2.587 0 2.576-3.91 0-3.91zm0-7.818H68.85c-2.587 0-2.576 3.91 0 3.91h35.443c2.587 0 2.576-3.91 0-3.91zM68.85 89.998h11.727c2.587 0 2.577-3.909 0-3.909H68.85c-2.587 0-2.576 3.91 0 3.91zm0-7.818h11.727c2.587 0 2.577-3.91 0-3.91H68.85c-2.587 0-2.576 3.91 0 3.91zm0 15.636h11.727c2.587 0 2.577-3.909 0-3.909H68.85c-2.587 0-2.576 3.91 0 3.91zm37.397-17.59c0-1.081-.874-1.955-1.954-1.955H88.656c-1.08 0-1.954.874-1.954 1.954v15.637c0 1.08.874 1.954 1.954 1.954h15.637c1.08 0 1.954-.874 1.954-1.954zm0-15.637c0-1.08-.874-1.955-1.954-1.955H68.85c-1.08 0-1.954.875-1.954 1.955v7.818c0 1.08.874 1.955 1.954 1.955h35.443c1.08 0 1.954-.875 1.954-1.955zm15.637 1.955h-7.818v47.17c0 5.165 7.818 5.164 7.818 0z"/></g></g></svg>
+<svg id="Group_18" data-name="Group 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="130" height="130" viewBox="0 0 130 130">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#485dff"/>
+      <stop offset="1" stop-color="#417cff"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_10" data-name="Rectangle 10" width="130" height="130" rx="30" fill="url(#linear-gradient)"/>
+  <g id="newspaper" transform="translate(31.078 31.816)">
+    <g id="Group_58" data-name="Group 58" transform="translate(10.922 12.184)">
+      <g id="Group_57" data-name="Group 57">
+        <rect id="Rectangle_41" data-name="Rectangle 41" width="33" height="3" transform="translate(0)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_60" data-name="Group 60" transform="translate(31.922 27.184)">
+      <g id="Group_59" data-name="Group 59">
+        <rect id="Rectangle_42" data-name="Rectangle 42" width="11" height="12" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_62" data-name="Group 62">
+      <g id="Group_61" data-name="Group 61">
+        <path id="Path_71" data-name="Path 71" d="M64.761,7.818H54.988V1.955A1.953,1.953,0,0,0,53.033,0H1.955A2.193,2.193,0,0,0,0,2.215V58.9a7.826,7.826,0,0,0,7.818,7.818H58.9A7.826,7.826,0,0,0,66.715,58.9V9.773A1.953,1.953,0,0,0,64.761,7.818ZM45.215,58.9H9.773a1.955,1.955,0,0,1,0-3.909H45.215A1.955,1.955,0,0,1,45.215,58.9Zm0-7.818H9.773a1.955,1.955,0,0,1,0-3.909H45.215A1.955,1.955,0,0,1,45.215,51.079ZM9.773,31.273H21.5a1.955,1.955,0,0,1,0,3.909H9.773A1.955,1.955,0,0,1,9.773,31.273Zm0-7.818H21.5a1.955,1.955,0,0,1,0,3.909H9.773A1.955,1.955,0,0,1,9.773,23.455Zm0,15.636H21.5A1.955,1.955,0,0,1,21.5,43H9.773A1.955,1.955,0,0,1,9.773,39.091Zm37.4,1.955A1.953,1.953,0,0,1,45.215,43H29.579a1.953,1.953,0,0,1-1.955-1.955V25.409a1.953,1.953,0,0,1,1.955-1.955H45.215a1.953,1.953,0,0,1,1.955,1.955Zm0-23.455a1.953,1.953,0,0,1-1.955,1.955H9.773a1.953,1.953,0,0,1-1.955-1.955V9.773A1.953,1.953,0,0,1,9.773,7.818H45.215A1.953,1.953,0,0,1,47.17,9.773ZM62.806,58.9c0,5.165-7.818,5.166-7.818,0V11.727h7.818Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

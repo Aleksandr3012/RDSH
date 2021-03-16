@@ -31,7 +31,7 @@
 		display: block;
 		@include block(160,160);
 		min-width: rem(100);
-		border-radius: rem(30);
+		border-radius: rem(15);
 		@include media-breakpoint-up(sm) {
 			border-radius: rem(20);
 		}
@@ -46,6 +46,12 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+
+	&__roww {
+		@include  media-breakpoint-down(sm) {
+			margin-bottom: rem(20);
 		}
 	}
 

@@ -42,7 +42,10 @@ html {
 
 .bg-w {
 	background-color: rgba($color: #fff, $alpha: 0.05);
-	border-radius: $border-radius;
+	border-radius: rem(15);
+	@include  media-breakpoint-up(md) {
+		border-radius: $border-radius;
+	}
 }
 
 .bg {
@@ -59,7 +62,7 @@ body {
 	position: relative;
 	@include mt;
 
-	@include  media-breakpoint-down(md) {
+	@include  media-breakpoint-down(sm) {
 		font-size: $xsmall;
 	}
 
@@ -143,9 +146,27 @@ body {
 
 .section-title {
 	padding-bottom: var(--sTPB);
-	h1{
+	h1, .h1{
 		@extend .h2;
 
+	}
+}
+
+h1, .h1 {
+	@include  media-breakpoint-down(sm) {
+		font-size: rem(20);
+	}
+}
+
+h4, .h4 {
+	@include  media-breakpoint-down(sm) {
+		font-size: $em-base;
+	}
+}
+
+h6, .h6 {
+	@include  media-breakpoint-down(sm) {
+		font-size: $small;
 	}
 }
 
@@ -531,9 +552,32 @@ option{
 .add-file{
 	display: block;
 	width: 100%;
-	margin-bottom: rem(30);
+	margin-bottom: rem(10);
+	@include media-breakpoint-up(md) {
+		margin-bottom: rem(30);
+	}
 	input{
 		@extend .invisible;
+	}
+	.btn {
+		@include  media-breakpoint-only(xl) {
+			padding-left: rem(10);
+			padding-right: rem(10);
+		}
+		@include  media-breakpoint-only(md) {
+			padding-left: rem(10);
+			padding-right: rem(10);
+		}
+		@include media-breakpoint-down(sm) {
+			padding-left: rem(10);
+			padding-right: rem(10);
+		}
+	}
+}
+
+.btn {
+	@include media-breakpoint-down(sm) {
+		font-size: $xsmall;
 	}
 }
 

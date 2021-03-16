@@ -5,7 +5,7 @@ mixin sContact()
 			.section__inner
 				+b.section-title
 					h1 Контакты
-					
+
 				.tabs
 					.tabs__caption
 						.tabs__btn Центральный аппарат
@@ -16,6 +16,10 @@ mixin sContact()
 								.col-lg-6
 								+e.col.col-lg-6
 									+personBlock('2',`Чурикова Яна Алексеевна`,`Сопредседатель РДШ, российский журналист, телеведущая, директор «МТV Россия»`)(class="bg-transparent")
+								+e.col.col-12
+									+e.mapWrap
+										script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab9014bb6fb43d8d724096511d0f29fe4aac10094651a370a5a5fcc6751dbb986&width=100%&height=240&lang=ru_RU&scroll=true')
+
 								.col-lg-6.align-self-end
 									+e.subtitle
 										h4 Главное здание
@@ -28,6 +32,58 @@ mixin sContact()
 									+e.block
 										h6 119048, Москва, ул.Усачева, д.64, подъезд 4
 										+e.sm Электронная почта: #[a(href="mailto:directorate-skm@yandex.ru") directorate-skm@yandex.ru]<br>Официальный сайт: #[a(href="#") рдш.рф]
+							.sContact__row.row.justify-content-center
+								.col-md-12.col-xl-8
+									.text-center.pt-2
+										h4 Форма обратной связи
+									.row.mt-2
+										.col-md-12
+											.sContact__block
+												form(name='feedback' method='post' novalidate='novalidate' enctype='multipart/form-data')
+													.row
+														+e.col.col-md-4
+															.form-group
+																input#feedback_lastName.form-control(type='text' name='feedback[lastName]' required='required' placeholder='Фамилия')
+														+e.col.col-md-4
+															.form-group
+																input#feedback_firstName.form-control(type='text' name='feedback[firstName]' required='required' placeholder='Имя')
+														+e.col.col-md-4
+															.form-group
+																input#feedback_patronymic.form-control(type='text' name='feedback[patronymic]' required='required' placeholder='Отчество')
+														+e.col.col-md-4
+															.form-group
+																input#feedback_email.form-control(type='email' name='feedback[email]' required='required' placeholder='Email')
+														+e.col.col-md-8
+															fieldset.form-group
+																.row
+																	.form-group
+																		.col-12
+																			label.add-file
+																				span.row.justify-content-between
+																					span.col-8.mb-2
+																						span.add-file__filename.form-control Загрузите файл
+																					span.col-4.mb-2
+																						span.btn.btn-block.btn-white Загрузить
+																				input#feedback_upload_uploadedFile.custom-file-input(type='file' name='feedback[upload][uploadedFile]' required='required')
+														.col-md-12.mb-4
+															.form-group
+																textarea#feedback_text.form-control(name='feedback[text]' required='required' placeholder='Текст')
+														.col-md-12.row
+															.col-11
+																p
+																	| Даю согласие на обработку персональных данных, в соответствии с пунктом 3 статьи 3
+																	a(href='http://www.consultant.ru/cons/cgi/online.cgi?req=doc;base=LAW;n=178749;fld=134;dst=1000000001,0;rnd=0.8625913290638554#05761907639822297')
+																		| Федерального
+																		| закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»
+															.col-1.form-switch
+																.form-group
+																	.form-check
+																		input#feedback_consent.form-check-input(type='checkbox' name='feedback[consent]' required='required' value='1')
+																		label.form-check-label.required(for='feedback_consent')
+													.text-center
+														button.sLogin__btn Отправить
+														input#feedback__token(type='hidden' name='feedback[_token]' novalidate='novalidate' value='R5uexMBXYQtw97o559UlOy4t3Av11RZfbZU0Ydz4O4I')
+
 						.tabs__content.active
 							+e.row.row
 								.col-lg-6.order-lg-1

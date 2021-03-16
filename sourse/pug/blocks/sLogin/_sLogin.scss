@@ -88,3 +88,9 @@
 		}
 	}
 } // end.sLogin
+
+.form-switch {
+	@include  media-breakpoint-down(lg) {
+		padding-left: .5rem;
+	}
+}

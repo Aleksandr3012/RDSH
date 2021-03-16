@@ -177,18 +177,31 @@
 											<div class="personBlock bg-transparent">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2.webp"/><img src="img/@2x/person-2.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2.webp"/><img src="img/@2x/person-2.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Чурикова Яна Алексеевна
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Чурикова Яна Алексеевна
+														<div class="personBlock__name d-none d-sm-block">Чурикова Яна Алексеевна
 														</div>
 														<p>Сопредседатель РДШ, российский журналист, телеведущая, директор «МТV Россия»</p>
 													</div>
 												</div>
+											</div>
+										</div>
+										<div class="sContact__col col-12">
+											<div class="sContact__mapWrap">
+												<script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab9014bb6fb43d8d724096511d0f29fe4aac10094651a370a5a5fcc6751dbb986&amp;width=100%&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
 											</div>
 										</div>
 										<div class="col-lg-6 align-self-end">
@@ -212,6 +225,80 @@
 											</div>
 										</div>
 									</div>
+									<div class="sContact__row row justify-content-center">
+										<div class="col-md-12 col-xl-8">
+											<div class="text-center pt-2">
+												<h4>Форма обратной связи</h4>
+											</div>
+											<div class="row mt-2">
+												<div class="col-md-12">
+													<div class="sContact__block">
+														<form name="feedback" method="post" novalidate="novalidate" enctype="multipart/form-data">
+															<div class="row">
+																<div class="sContact__col col-md-4">
+																	<div class="form-group">
+																		<input class="form-control" id="feedback_lastName" type="text" name="feedback[lastName]" required="required" placeholder="Фамилия"/>
+																	</div>
+																</div>
+																<div class="sContact__col col-md-4">
+																	<div class="form-group">
+																		<input class="form-control" id="feedback_firstName" type="text" name="feedback[firstName]" required="required" placeholder="Имя"/>
+																	</div>
+																</div>
+																<div class="sContact__col col-md-4">
+																	<div class="form-group">
+																		<input class="form-control" id="feedback_patronymic" type="text" name="feedback[patronymic]" required="required" placeholder="Отчество"/>
+																	</div>
+																</div>
+																<div class="sContact__col col-md-4">
+																	<div class="form-group">
+																		<input class="form-control" id="feedback_email" type="email" name="feedback[email]" required="required" placeholder="Email"/>
+																	</div>
+																</div>
+																<div class="sContact__col col-md-8">
+																	<fieldset class="form-group">
+																		<div class="row">
+																			<div class="form-group">
+																				<div class="col-12">
+																					<label class="add-file"><span class="row justify-content-between"><span class="col-8 mb-2"><span class="add-file__filename form-control">Загрузите файл</span></span><span class="col-4 mb-2"><span class="btn btn-block btn-white">Загрузить</span></span></span>
+																						<input class="custom-file-input" id="feedback_upload_uploadedFile" type="file" name="feedback[upload][uploadedFile]" required="required"/>
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																	</fieldset>
+																</div>
+																<div class="col-md-12 mb-4">
+																	<div class="form-group">
+																		<textarea class="form-control" id="feedback_text" name="feedback[text]" required="required" placeholder="Текст"></textarea>
+																	</div>
+																</div>
+																<div class="col-md-12 row">
+																	<div class="col-11">
+																		<p>Даю согласие на обработку персональных данных, в соответствии с пунктом 3 статьи 3<a href="http://www.consultant.ru/cons/cgi/online.cgi?req=doc;base=LAW;n=178749;fld=134;dst=1000000001,0;rnd=0.8625913290638554#05761907639822297">
+																				Федерального
+																				закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных»</a></p>
+																	</div>
+																	<div class="col-1 form-switch">
+																		<div class="form-group">
+																			<div class="form-check">
+																				<input class="form-check-input" id="feedback_consent" type="checkbox" name="feedback[consent]" required="required" value="1"/>
+																				<label class="form-check-label required" for="feedback_consent"></label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="text-center">
+																<button class="sLogin__btn">Отправить</button>
+																<input id="feedback__token" type="hidden" name="feedback[_token]" novalidate="novalidate" value="R5uexMBXYQtw97o559UlOy4t3Av11RZfbZU0Ydz4O4I"/>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="tabs__content active">
 									<div class="sContact__row row">
@@ -224,14 +311,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-1.webp"/><img src="img/@2x/person-2-1.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-1.webp"/><img src="img/@2x/person-2-1.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Плещева Ирина Владимировна
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Плещева Ирина Владимировна
+														<div class="personBlock__name d-none d-sm-block">Плещева Ирина Владимировна
 														</div>
 														<p>Исполнительный директор<br> E-mail: <a href="mailto:IPlesheva@myrdsh.ru">IPlesheva@myrdsh.ru</a></p>
 													</div>
@@ -240,14 +335,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-2.webp"/><img src="img/@2x/person-2-2.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-2.webp"/><img src="img/@2x/person-2-2.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Киреченков Геннадий Анатольевич
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Киреченков Геннадий Анатольевич
+														<div class="personBlock__name d-none d-sm-block">Киреченков Геннадий Анатольевич
 														</div>
 														<p>Заместитель исполнительного директора по методическому обеспечению<br> E-mail: <a href="mailto:ESamsonova@myrdsh.ru">ESamsonova@myrdsh.ru</a></p>
 													</div>
@@ -256,14 +359,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-3.webp"/><img src="img/@2x/person-2-3.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-3.webp"/><img src="img/@2x/person-2-3.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Самсонова Екатерина Сергеевна
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Самсонова Екатерина Сергеевна
+														<div class="personBlock__name d-none d-sm-block">Самсонова Екатерина Сергеевна
 														</div>
 														<p>Заместитель исполнительного директора по маркетингу<br> E-mail: <a href="mailto:ESamsonova@myrdsh.ru">ESamsonova@myrdsh.ru</a></p>
 													</div>
@@ -279,14 +390,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-4.webp"/><img src="img/@2x/person-2-4.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-4.webp"/><img src="img/@2x/person-2-4.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Кудряшов Александр Сергеевич
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Кудряшов Александр Сергеевич
+														<div class="personBlock__name d-none d-sm-block">Кудряшов Александр Сергеевич
 														</div>
 														<p>Директор<br> E-mail: <a href="mailto:AKudryashov@myrdsh.ru">AKudryashov@myrdsh.ru</a></p>
 													</div>
@@ -295,14 +414,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-5.webp"/><img src="img/@2x/person-2-5.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-5.webp"/><img src="img/@2x/person-2-5.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Толкачева Дарья Геннадьевна
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Толкачева Дарья Геннадьевна
+														<div class="personBlock__name d-none d-sm-block">Толкачева Дарья Геннадьевна
 														</div>
 														<p>Заместитель директора по региональному взаимодействию<br> E-mail: <a href="mailto:pronina.d.g@rdcentr.ru">pronina.d.g@rdcentr.ru</a></p>
 													</div>
@@ -311,14 +438,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-6.webp"/><img src="img/@2x/person-2-6.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-6.webp"/><img src="img/@2x/person-2-6.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Мокшина Марина Александровна
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Мокшина Марина Александровна
+														<div class="personBlock__name d-none d-sm-block">Мокшина Марина Александровна
 														</div>
 														<p>Заместитель директора по общим вопросам<br> E-mail: <a href="mailto:MMokshina@myrdsh.ru">MMokshina@myrdsh.ru</a></p>
 													</div>
@@ -327,14 +462,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-7.webp"/><img src="img/@2x/person-2-7.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-7.webp"/><img src="img/@2x/person-2-7.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Носиков Евгений Сергеевич
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Носиков Евгений Сергеевич
+														<div class="personBlock__name d-none d-sm-block">Носиков Евгений Сергеевич
 														</div>
 														<p>Заместитель директора по информационной политике и реализации проектов<br> E-mail: <a href="mailto:Nosikov.e.s@rdcentr.ru">Nosikov.e.s@rdcentr.ru</a></p>
 													</div>
@@ -350,14 +493,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-8.webp"/><img src="img/@2x/person-2-8.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-8.webp"/><img src="img/@2x/person-2-8.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Гарафутдинова Динара Талгатовна
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Гарафутдинова Динара Талгатовна
+														<div class="personBlock__name d-none d-sm-block">Гарафутдинова Динара Талгатовна
 														</div>
 														<p>Руководитель отдела реализации проектов и программ в сфере военно-патриотеского воспитания<br> E-mail: <a href="mailto:garafutdinova.d.t@rdcentr.ru">garafutdinova.d.t@rdcentr.ru</a></p>
 													</div>
@@ -368,14 +519,22 @@
 											<div class="personBlock personBlock--contacts">
 												<div class="personBlock__row row">
 													<div class="col-sm-auto">
-														<!-- picture-->
-														<picture> 
-															<source type="image/webp" srcset="img/@2x/webp/person-2-9.webp"/><img src="img/@2x/person-2-9.jpg" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
+														<div class="personBlock__roww row align-items-center">
+															<div class="col-4 col-sm-12">
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/person-2-9.webp"/><img src="img/@2x/person-2-9.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture-->
+															</div>
+															<div class="col d-sm-none">
+																<div class="personBlock__name">Клепикова Евгения Сергеевна
+																</div>
+															</div>
+														</div>
 													</div>
 													<div class="col">
-														<div class="personBlock__name">Клепикова Евгения Сергеевна
+														<div class="personBlock__name d-none d-sm-block">Клепикова Евгения Сергеевна
 														</div>
 														<p>Руководитель отдела реализации проектов и программ в сфере краеведения<br> E-mail: <a href="mailto:mazaev.p@myrdsh.ru">mazaev.p@myrdsh.ru</a></p>
 													</div>

@@ -338,7 +338,7 @@
 	}
 
 	&__slider {
-		padding-top: rem(10);
+		padding-top: rem(20);
 	}
 
 	&__slide {
@@ -383,13 +383,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: rem(12) 0;
+		//padding: rem(12) 0;
 		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.16);
 		height: rem(62);
 		border-radius: rem(12);
 		max-width: rem(62);
 		@include media-breakpoint-up(sm) {
-			padding: rem(25) 0;
+			//padding: rem(25) 0;
 			max-width: rem(100);
 			border-radius: rem(30);
 			height: rem(100);
@@ -399,13 +399,12 @@
 			height: rem(130);
 			max-width: rem(130);
 		}
+		@include  media-breakpoint-only(lg) {
+			height: rem(118);
+		}
 		margin: 0 auto;
 
-		img {
-			@include media-breakpoint-down(md) {
-				max-width: 50%;
-			}
-		}
+
 	}
 }
 

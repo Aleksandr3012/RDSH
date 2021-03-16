@@ -32,7 +32,10 @@
 	flex-direction: column;
 	border-radius: rem(35);
 	overflow: hidden;
-	padding: rem(11);
+	padding: rem(10) 0 0 0;
+	@include  media-breakpoint-up(sm) {
+		padding: rem(11);
+	}
 	margin-bottom: rem(40);
 	min-height: 270px;
 	height: calc(100% - #{rem(40)});

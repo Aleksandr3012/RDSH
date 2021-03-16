@@ -3,6 +3,12 @@
 	 label {
 	 	display: block;
 	 }
+
+	.row {
+		@include media-breakpoint-down(md) {
+			@include roww(15px);
+		}
+	}
 }
 .form-wrap{
  	&__input-wrap{
@@ -22,6 +28,12 @@
  		width: 100%;
  		display: block;
  	}
+}
+
+.form-control {
+	@include media-breakpoint-down(sm) {
+		font-size: $xsmall;
+	}
 }
 
 

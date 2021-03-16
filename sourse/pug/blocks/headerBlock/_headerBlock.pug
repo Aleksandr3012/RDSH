@@ -7,11 +7,11 @@ mixin headerBlock()
 					+b.mainSlider
 						+e.slider--js.swiper-container
 							.swiper-wrapper
-								mixin slide(i,t,bg)
+								mixin slide(i,t)
 									+e.slide.swiper-slide
 										+e.item(href='#')
-											+e.logo(style=bg)
-												img.swiper-lazy.res-i(src="#" data-src=`img/category-${i}.svg`, alt="")
+											+e.logo
+												img.swiper-lazy.res-i(src="#" data-src=`img/svg/category-${i}.svg`, alt="")
 											h6= t
 								+slide('1','Проекты',`background-image: linear-gradient(to bottom, #64dbff 0%, #4294f4 100%);`)
 								+slide('5','Об РДШ',`background-image: linear-gradient(to bottom, #ff7777 0%, #f02e2e 100%);`)
