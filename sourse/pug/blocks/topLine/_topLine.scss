@@ -2,7 +2,7 @@
 .topLine {
 
 	&__inner {
-		padding: rem(15px);
+		padding: rem(8px);
 		border-radius: rem(15px);
 		@include media-breakpoint-up(md) {
 			padding: rem(25px) var(--sPL) rem(24px);
