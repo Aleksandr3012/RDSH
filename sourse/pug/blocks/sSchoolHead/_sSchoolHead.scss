@@ -4,7 +4,10 @@
 	margin-bottom: rem(50);
 	&__item{
 		min-height: calc(100% - 30px);
-		margin-bottom: 30px; 
+		margin-bottom: 15px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 30px;
+		}
 	}
 	&__title{
 		margin-bottom: 1rem;
@@ -12,7 +15,10 @@
 	h1{
 		@extend .h2;
 		font-weight: 500;
-		margin-bottom: rem(50);
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(50);
+		}
 	}
 	a{
 		color: #9dd2ff;

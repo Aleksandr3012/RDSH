@@ -4,7 +4,7 @@ mixin sProjects(data)
 		.container
 			+b.section-title.text-center
 				h2 Последние проекты направления
-				
+
 			+e.row.row
 				.col-md-6.col-xl-4
 					+projectItem('1','15.05 – 25.10','background-color: #ff9451','Всероссийская киберспортивная школьная лига')
@@ -30,16 +30,22 @@ mixin projectItem(i,date,dr,title,ar,sl)
 		else
 			+pic(`project-bg-${i}.jpg`,'','')(class="picture-bg")
 		+e.smDescr
-			if ar
-				+e.archive
-					+icon('archive')
-					span Архив
-			+e.date
-				+e.direction(style= dr)
-				span!= date
+			.row.align-items-center
+				.col
+					+e.location
+						+icon('location')
+						span Челябинская обл.
+				+e.wrap.col
+					if ar
+						+e.archive
+							+icon('archive')
+							span Архив
+					+e.date
+						+e.direction(style= dr)
+						span!= date
 		+e.main
 			.row.align-items-center
-				.col-sm
+				.col
 					+e.title(href="#")!= title
 				+e.col.col
 					+e.btn(href="#") Подать заявку
@@ -52,10 +58,11 @@ mixin sProjects-main(t="Проекты")
 				
 			+b.filter
 				+e.main
-					
-					h1= t
-					+e.quantly(style="background-color: #fc5454") 57
-					+e.radioWrap
+
+					+e.wrap
+						h1= t
+						+e.quantly(style="background-color: #fc5454") 57
+					+e.radioWrap.d-none.d-lg-flex
 						+e.radio.form-check.form-switch
 							label.form-check-label(for="current") Текущие
 							input.form-check-input(type="checkbox" id="current")
@@ -65,18 +72,28 @@ mixin sProjects-main(t="Проекты")
 						+e.radio.form-check.form-switch
 							label.form-check-label(for="regional") Региональные
 							input.form-check-input(type="checkbox" id="regional")
-						+e.btn.d-none.d-md-block(type='button')
+						//+e.btn.d-none.d-md-block(type='button')
 							+icon('chevron-down')
-					+e.search
+					+e.search.d-lg-none
 						+input('Введите название проекта…','search')
 						+e.btnSearch(type="submit")
 							+icon('search')
-					+e.filter.accardion-js
+					+e.filter.accardion-js.d-lg-none
 						span Фильтр
 						+icon('chevron-down')
 				+e.hidden.accardion_hidden-js
 					+e.hiddenInner
-						.row
+						+e.radioWrap
+							+e.radio.form-check.form-switch
+								label.form-check-label(for="current") Текущие
+								input.form-check-input(type="checkbox" id="current")
+							+e.radio.form-check.form-switch
+								label.form-check-label(for="federal") Федеральные
+								input.form-check-input(type="checkbox" id="federal")
+							+e.radio.form-check.form-switch
+								label.form-check-label(for="regional") Региональные
+								input.form-check-input(type="checkbox" id="regional")
+						//.row
 							.col-sm-6.col-lg-3
 								+b.dopFilter
 									+e.main.accardionToggle--js

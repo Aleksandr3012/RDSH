@@ -154,7 +154,7 @@ body {
 	}
 }
 
-h1, .h1 {
+h1, .h1, h2, .h2 {
 	@include  media-breakpoint-down(sm) {
 		font-size: rem(20);
 	}
@@ -163,6 +163,12 @@ h1, .h1 {
 h4, .h4 {
 	@include  media-breakpoint-down(sm) {
 		font-size: $em-base;
+	}
+}
+
+h5, .h5 {
+	@include  media-breakpoint-down(sm) {
+		font-size: $small;
 	}
 }
 

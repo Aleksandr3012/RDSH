@@ -1,6 +1,7 @@
 // start .sProjects
 .sProjects {
 	padding-bottom: rem(40);
+
 	h2 {
 		@include rfs(29px);
 		letter-spacing: rem(0.2);
@@ -19,56 +20,73 @@
 		}
 	}
 
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) { }
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-} // end.sProjects
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+}
+
+// end.sProjects
 
 //projectItem start
 .projectItem {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	border-radius: rem(35);
 	overflow: hidden;
 	padding: rem(10) 0 0 0;
-	@include  media-breakpoint-up(sm) {
+	border-radius: rem(15);
+	@include media-breakpoint-up(sm) {
+		border-radius: rem(35);
 		padding: rem(11);
+		min-height: 270px;
 	}
+	min-height: 237px;
 	margin-bottom: rem(40);
-	min-height: 270px;
 	height: calc(100% - #{rem(40)});
 	background-color: #ffffff;
 	z-index: 2;
+
 	picture {
 		z-index: -1;
 		height: auto;
 		max-height: 100%;
-		&::after{
-			content: '';
-			position: absolute;
-			background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 70%);
-			height: 20px;
-			width: 100%;
-			bottom: 0;
-			margin-bottom: 0px;
-			left: 0;
+
+		&::after {
+			//content: '';
+			//position: absolute;
+			//background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+			//height: 20px;
+			//width: 100%;
+			//bottom: 0;
+			//margin-bottom: 0px;
+			//left: 0;
 		}
+
 		img {
-		 
+			width: 100%;
 		}
 
 	}
 
 	&__main {
 		margin-top: auto;
-		padding: rem(12);
-		border-radius: rem(25);
+
 		@extend .bg-filter;
+		padding: rem(10);
+		@include media-breakpoint-up(sm) {
+			padding: rem(12);
+			border-radius: rem(25);
+		}
 
 		&::before, &::after {
-			border-radius: rem(25);
+			@include media-breakpoint-up(sm) {
+				border-radius: rem(25);
+			}
 		}
 
 		.row {
@@ -97,7 +115,21 @@
 		.icon {
 			font-size: rem(13);
 			color: #fff;
-			margin-right: rem(5);
+			@include media-breakpoint-up(sm) {
+				margin-right: rem(5);
+			}
+			@include media-breakpoint-only(md) {
+				margin-right: 0;
+			}
+		}
+
+		span {
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+			@include media-breakpoint-only(md) {
+				display: none;
+			}
 		}
 	}
 
@@ -121,49 +153,74 @@
 	}
 
 	&__title {
-		font-size: $small;
-		line-height: calc(20/16);
+		font-size: rem(12);
+		@include media-breakpoint-up(sm) {
+			font-size: $small;
+		}
+		line-height: calc(20 / 16);
 		display: block;
 		color: #fff;
 		text-decoration: none !important;
+
 		&:hover {
 			color: rgb(194, 194, 194);
 
 		}
-		@include media-breakpoint-down(sm) {
-			text-align: center;
-		}
+
 	}
 
 	&__btn {
 		@extend .btn;
 		@extend .btn-success;
 		white-space: nowrap;
+		color: #fff;
 	}
 
 	&__smDescr {
+		@include media-breakpoint-down(sm) {
+			padding-left: rem(10);
+			padding-right: rem(10);
+		}
+	}
+
+	&__location {
+		border-radius: $h6-font-size;
+		background-color: $body-color;
+		color: #293377;
+		overflow: hidden;
+		padding: rem(8) rem(10);
+		display: inline-flex;
+		align-items: center;
+		font-size: rem(12);
+
+		.icon {
+			color: #293377;
+			font-size: rem(14);
+			margin-right: rem(5);
+		}
+	}
+
+	&__wrap {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 	}
 
 	&__col {
-		text-align: center;
+
+		text-align: right;
 		@include media-breakpoint-up(sm) {
 			max-width: 40%;
-			text-align: right;
 		}
 		@include media-breakpoint-up(xxxl) {
 			max-width: 37%;
 		}
 
-		@include media-breakpoint-down(sm) {
-			padding-top: rem(15);
-		}
 	}
 
 	&--slide {
 		margin-bottom: 0;
+
 		.projectItem__main {
 			@include media-breakpoint-up(xl) {
 				padding-right: rem(45);
@@ -173,7 +230,9 @@
 			}
 		}
 	}
-}//projectItem end
+}
+
+//projectItem end
 
 // filter start
 .filter {
@@ -190,7 +249,16 @@
 		@extend h2;
 		margin-bottom: 0;
 	}
-	
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			margin-bottom: rem(13);
+		}
+	}
+
 	&::before, &::after {
 		content: '';
 		position: absolute;
@@ -202,20 +270,25 @@
 		@include mt;
 		border-radius: $border-radius;
 	}
+
 	&::before {
 		background: rgba($color: rgb(1, 0, 37), $alpha: 0.0);
 		backdrop-filter: blur(5px);
 	}
+
 	&::after {
 		background: rgba($color: #fff, $alpha: 0.1);
 	}
+
 	&.active {
 		&::before, &::after {
 			border-radius: $border-radius $border-radius 0 0;
 		}
+
 		&::before {
 			background: rgba($color: rgb(1, 0, 37), $alpha: 0.4);
 		}
+
 		&::after {
 			background: rgba($color: #fff, $alpha: 0.3);
 		}
@@ -225,29 +298,34 @@
 		margin-left: rem(15);
 		margin-right: rem(10);
 		border-radius: $h2-font-size;
+		font-size: rem(12);
+		@include media-breakpoint-up(sm) {
 		font-size: $small;
+		}
 		font-weight: 500;
 		padding: rem(5) rem(10);
 	}
 
 	&__radioWrap {
+		background-color: rgba($color: #fff, $alpha: 0.1);
+		padding: rem(10);
 		@include media-breakpoint-up(md) {
 			display: flex;
 			align-items: center;
+
+			padding: rem(10) rem(16) rem(10);
 		}
-		background-color: rgba($color: #fff, $alpha: 0.1);
 		border-radius: $border-radius;
-		padding: rem(10) rem(16) rem(10);
 
 		@include media-breakpoint-up(lg) {
 			margin-left: auto;
 		}
 		@include media-breakpoint-down(xxl) {
-			margin-bottom: rem(10);
+			//margin-bottom: rem(10);
 		}
 
 		@include media-breakpoint-down(lg) {
-			margin-top: rem(10);
+			//margin-top: rem(10);
 			width: 100%;
 		}
 	}
@@ -274,9 +352,11 @@
 				&::before, &::after {
 					border-radius: 0 0 $border-radius $border-radius;
 				}
+
 				&::before {
 					background: rgba($color: rgb(1, 0, 37), $alpha: 0.4);
 				}
+
 				&::after {
 					background: rgba($color: #fff, $alpha: 0.3);
 				}
@@ -286,8 +366,12 @@
 
 	//внутренняя часть выпадающего большого аккардиона
 	&__hiddenInner {
-		padding: rem(17) rem(30) rem(10);
+		padding: 0 rem(10) rem(10) rem(10);
+		@include media-breakpoint-up(sm) {
+			padding: rem(17) rem(30) rem(10);
+		}
 		position: relative;
+
 		&::before, &::after {
 			content: '';
 			position: absolute;
@@ -299,18 +383,20 @@
 			@include mt;
 			border-radius: $border-radius;
 		}
+
 		&::before {
 			background: rgba($color: rgb(1, 0, 37), $alpha: 0.0);
 			backdrop-filter: blur(5px);
 		}
+
 		&::after {
 			background: rgba($color: #fff, $alpha: 0.1);
 		}
 	}
-	
+
 	&__search {
 		position: relative;
-		
+
 		@include media-breakpoint-up(xxl) {
 			margin-right: rem(15);
 			margin-left: rem(15);
@@ -323,20 +409,24 @@
 			max-width: 85%;
 		}
 		@include media-breakpoint-down(lg) {
-			max-width: 70%;
+			max-width: 69.4%;
 		}
 		@include media-breakpoint-down(sm) {
-			max-width: 100%;
-			margin-bottom: rem(10);
+			//max-width: 85%;
+			//margin-bottom: rem(10);
 		}
 
 		.form-control {
-			padding: rem(9.5) rem(30) rem(9.5) rem(10);
+			padding: rem(9) rem(30) rem(9) rem(10);
 			@include media-breakpoint-up(xxxl) {
 				padding: rem(9.5) rem(24);
 			}
 			@include media-breakpoint-down(xxxl) {
 				font-size: $small;
+			}
+			@include media-breakpoint-down(sm) {
+				font-size: rem(12);
+
 			}
 		}
 	}
@@ -345,16 +435,25 @@
 		border: none;
 		background-color: rgba($color: #fff, $alpha: 0.15);
 		border-radius: 50%;
-		width: 33px;
-		height: 33px;
+
 		display: grid;
 		place-items: center;
 		@include a-cent(y);
+		width: $h3-font-size;
+		height: $h3-font-size;
+		@include media-breakpoint-up(sm) {
 		right: rem(10px);
+			width: 33px;
+			height: 33px;
+		}
+		right: rem(5px);
 		outline: none !important;
-		
+
 		.icon {
-			font-size: rem(18);
+			font-size: rem(14);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(18);
+			}
 			color: #fff;
 		}
 	}
@@ -363,17 +462,24 @@
 		cursor: pointer;
 		background-color: rgba($color: #fff, $alpha: 0.1);
 		border-radius: $border-radius;
-		padding: rem(12) rem(20);
-		font-size: $small;
+		padding: rem(10);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		font-size: rem(12);
+		@include media-breakpoint-up(sm) {
+			font-size: $small;
+			padding: rem(12) rem(20);
+		}
 
 		@include media-breakpoint-down(xxl) {
 			margin-left: auto;
 		}
 		@include media-breakpoint-down(sm) {
-			width: 100%;
+			margin-left: rem(7);
+		}
+		@include media-breakpoint-down(sm) {
+			//width: 100%;
 		}
 
 		.icon {
@@ -408,6 +514,7 @@
 				padding-left: rem(25);
 			}
 		}
+
 		&:first-child {
 			padding-left: 0;
 		}
@@ -436,13 +543,16 @@
 		@include media-breakpoint-only(md) {
 			margin-left: auto;
 		}
+
 		.icon {
 			font-size: rem(9);
 			color: #fff;
 			opacity: .3;
 		}
 	}
-}// filter end
+}
+
+// filter end
 
 //dopFilter start
 .dopFilter {
@@ -545,4 +655,6 @@
 			background-color: rgba($color: $primary, $alpha: 0.4);
 		}
 	}
-}//dopFilter end
+}
+
+//dopFilter end

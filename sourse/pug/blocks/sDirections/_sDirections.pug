@@ -38,7 +38,7 @@ mixin directionsItem(i,title,text,g)
 			+b.directionsItem(href="#")
 				+e.main
 					.row
-						+e.col.col-2.col-sm-auto
+						+e.col.col-3.col-sm-auto
 							img.res-i(src=`img/svg/direction-${i}.svg`, alt="" loading="lazy")
 						.col
 							h4= title
@@ -62,7 +62,7 @@ mixin subdirectionsItem(i,t,list)
 		.col-sm-6
 			+e.item
 				+e.row.row.align-items-center
-					.col-2.col-sm-3
+					.col-3
 						img.res-i(src=`img/svg/subdirections-${i}.svg`, alt="" loading="lazy")
 					.col
 						+e.text!= t

@@ -212,6 +212,7 @@
 	min-height: rem(150);
 	padding: rem(10);
 	border-radius: rem(15);
+
 	@include media-breakpoint-up(sm) {
 		min-height: rem(227);
 		padding: rem(14);
@@ -262,6 +263,7 @@
 	}
 
 	&__iconArrow {
+
 		@extend .bg-filter;
 		@include media-breakpoint-down(sm) {
 			width: rem(36px);
@@ -269,6 +271,10 @@
 			border-radius: 50%;
 			display: grid;
 			place-items: center;
+			overflow: hidden;
+			&::before, &::after {
+				border-radius: 50%;
+			}
 		}
 		@include media-breakpoint-up(sm) {
 			&::before, &::after {

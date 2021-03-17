@@ -9,6 +9,7 @@
 		--sPR: #{rem(30)};
 		--sTPB: #{rem(20)};
 		--sMB: #{rem(40)};
+		--swiperBgDef: #{rgba($color: #f4f7ff, $alpha: .15)};
 	}
 
 	--sPT: #{rem(15)};
@@ -23,7 +24,7 @@
 		--swiperArrowPosition: #{rem(30)};
 		--swiperBorderColorDef: var(--bs-primary);
 		--swiperColorDef: #fff;
-		--swiperBgDef: #{rgba($color: #f4f7ff, $alpha: .15)};
+		--swiperBgDef: #{rgba($color: #f4f7ff, $alpha: .4)};
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
 		--swiperColorDefHover: var(--bs-primary);

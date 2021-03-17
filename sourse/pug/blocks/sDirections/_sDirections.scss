@@ -97,6 +97,7 @@
 	}
 
 	&__subtitle {
+		font-size: rem(12);
 		@include media-breakpoint-up(sm) {
 			font-size: $small;
 		}
