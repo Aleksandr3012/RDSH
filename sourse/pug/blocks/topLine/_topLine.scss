@@ -202,7 +202,10 @@
 		max-width: 220px;
 	}
 	&__controls {
-		background: rgba($color: $body-color, $alpha: 0.1) !important;
+		background: rgba($color: $body-color, $alpha: 0.3) !important;
+		@include media-breakpoint-up(lg) {
+			background: rgba($color: $body-color, $alpha: 0.1) !important;
+		}
 		border-radius: rem(30) !important;
 
 		svg {

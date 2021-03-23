@@ -209,7 +209,7 @@
 
 .linkBlock {
 	position: relative;
-	min-height: rem(150);
+	min-height: rem(140);
 	padding: rem(10);
 	border-radius: rem(15);
 
@@ -224,14 +224,19 @@
 	overflow: hidden;
 	display: flex;
 	align-items: flex-end;
-	margin-bottom: rem(15);
+	margin-bottom: rem(12);
+	@include media-breakpoint-up(sm) {
+		margin-bottom: rem(15);
+	}
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(30);
 	}
 	text-decoration: none !important;
 
 	&:hover {
-		transform: translateY(-10px);
+		@include media-breakpoint-up(md) {
+			transform: translateY(-10px);
+		}
 	}
 
 	&__block {
@@ -300,7 +305,7 @@
 
 	&--whithTxt {
 		padding-bottom: rem(12);
-		min-height: rem(150);
+		min-height: rem(140);
 		@include media-breakpoint-up(sm) {
 			min-height: rem(247);
 		}
@@ -329,7 +334,7 @@
 	@include media-breakpoint-down(lg) {
 		margin-bottom: rem(40);
 	}
-	max-height: rem(260);
+	max-height: rem(220);
 	@media (min-width: 375px) {
 		max-height: calc(#{rem(90)} + 33vw);
 	}
@@ -452,10 +457,17 @@
 
 .swiper-pagination-bullet {
 	background-color: rgba($color: #fff, $alpha: 0.26);
-	width: 15px;
-	height: 15px;
-	margin-left: rem(8);
-	margin-right: rem(8);
+	width: 12px;
+	height: 12px;
+	margin-left: rem(6);
+	margin-right: rem(6);
+	@include media-breakpoint-up(sm) {
+		width: 15px;
+		height: 15px;
+		margin-left: rem(8);
+		margin-right: rem(8);
+	}
+
 
 	&-active {
 		background-color: $body-color;
