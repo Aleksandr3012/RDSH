@@ -337,7 +337,7 @@
 	@include media-breakpoint-down(sm) {
 		margin-bottom: rem(25);
 	}
-	max-height: rem(185);
+	max-height: rem(180);
 	@media (min-width: 420px) {
 		max-height: calc(#{rem(90)} + 33vw);
 	}
