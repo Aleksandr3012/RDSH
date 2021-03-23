@@ -438,8 +438,12 @@
 			height: rem(118);
 		}
 		margin: 0 auto;
+	}
 
-
+	.swiper-pagination {
+		@media (max-width: 400px) {
+			margin-top: -5px;
+		}
 	}
 }
 
