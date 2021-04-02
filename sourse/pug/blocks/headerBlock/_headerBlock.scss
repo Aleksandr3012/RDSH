@@ -89,7 +89,6 @@
 		}
 	}
 
-
 	@include media-breakpoint-up(xs) {
 	}
 	@include media-breakpoint-between(md, xl) {
@@ -104,7 +103,6 @@
 			order: -1 !important;
 		}
 	}
-
 }
 
 // end.headerBlock
@@ -171,8 +169,7 @@
 		}
 
 		&::before {
-
-			content: '';
+			content: "";
 			@include a-cent(y);
 			left: rem(-10);
 			height: 100%;
@@ -203,7 +200,6 @@
 			font-size: $h1-font-size;
 		}
 		line-height: 1;
-
 	}
 }
 
@@ -268,7 +264,6 @@
 	}
 
 	&__iconArrow {
-
 		@extend .bg-filter;
 		@include media-breakpoint-down(sm) {
 			width: rem(36px);
@@ -277,12 +272,14 @@
 			display: grid;
 			place-items: center;
 			overflow: hidden;
-			&::before, &::after {
+			&::before,
+			&::after {
 				border-radius: 50%;
 			}
 		}
 		@include media-breakpoint-up(sm) {
-			&::before, &::after {
+			&::before,
+			&::after {
 				display: none;
 			}
 		}
@@ -311,13 +308,17 @@
 		}
 		@include media-breakpoint-down(sm) {
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				left: 0;
 				top: 0;
 				width: 100%;
 				height: 100%;
-				background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+				background-image: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0) 0%,
+					#000000 100%
+				);
 				opacity: 0.9;
 			}
 		}
@@ -377,14 +378,16 @@
 	}
 
 	&__slide {
-		height: calc((100% - 30px) / 2);
+		height: calc((100% - 15px) / 2);
+		@include media-breakpoint-up(sm) {
+			height: calc((100% - 30px) / 2);
+		}
 		display: flex;
 		justify-content: center;
 		@include media-breakpoint-up(lg) {
 			height: calc((100% - 30px) / 3);
 		}
 	}
-
 
 	&__item {
 		display: block;
@@ -475,7 +478,6 @@
 		margin-right: rem(8);
 	}
 
-
 	&-active {
 		background-color: $body-color;
 	}
@@ -498,7 +500,6 @@
 	@include media-breakpoint-down(lg) {
 		align-items: center;
 	}
-
 
 	&__text {
 		font-size: 10px;
