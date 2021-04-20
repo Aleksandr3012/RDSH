@@ -209,30 +209,40 @@
 
 .linkBlock {
 	position: relative;
-	min-height: rem(150);
-	padding: rem(10);
-	border-radius: rem(15);
+	display: block;
+	// min-height: rem(150);
 
+	// padding: rem(10);
+	border-radius: rem(15);
+	overflow: hidden;
+	picture{
+		position: static;
+	}
+
+	img{
+		max-width: 100%;
+		height: auto;
+	}
 	@include media-breakpoint-up(sm) {
-		min-height: rem(227);
-		padding: rem(14);
+		// min-height: rem(227);
+		// padding: rem(14);
 		border-radius: rem(30);
 	}
 	@include media-breakpoint-only(md) {
-		min-height: rem(300);
+		// min-height: rem(300);
 	}
-	overflow: hidden;
-	display: flex;
-	align-items: flex-end;
+	// overflow: hidden;
+	// display: flex;
+	// align-items: flex-end;
 	margin-bottom: rem(15);
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(30);
 	}
 	text-decoration: none !important;
 
-	&:hover {
-		transform: translateY(-10px);
-	}
+	// &:hover {
+	// 	transform: translateY(-10px);
+	// }
 
 	&__block {
 		color: #fff;
@@ -298,28 +308,28 @@
 		}
 	}
 
-	&--whithTxt {
-		padding-bottom: rem(12);
-		min-height: rem(150);
-		@include media-breakpoint-up(sm) {
-			min-height: rem(247);
-		}
-		@include media-breakpoint-down(sm) {
-			&::before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-				opacity: 0.9;
-			}
-		}
-		@include media-breakpoint-only(md) {
-			min-height: rem(300);
-		}
-	}
+	// &--whithTxt {
+	// 	padding-bottom: rem(12);
+	// 	min-height: rem(150);
+	// 	@include media-breakpoint-up(sm) {
+	// 		min-height: rem(247);
+	// 	}
+	// 	@include media-breakpoint-down(sm) {
+	// 		&::before {
+	// 			content: '';
+	// 			position: absolute;
+	// 			left: 0;
+	// 			top: 0;
+	// 			width: 100%;
+	// 			height: 100%;
+	// 			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+	// 			opacity: 0.9;
+	// 		}
+	// 	}
+	// 	@include media-breakpoint-only(md) {
+	// 		min-height: rem(300);
+	// 	}
+	// }
 }
 
 .mainSlider {

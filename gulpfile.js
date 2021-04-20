@@ -20,6 +20,8 @@ global.$ = {
 	cssnano: require('cssnano'),
 	nested: require('postcss-nested'),
 	plumber: require('gulp-plumber'), 
+	resizer: require('gulp-images-resizer'),
+	responsive: require('@tigersway/gulp-responsive'),
 	path: {
 		tasks: require('./gulp/config/tasks.js'),
 	},
@@ -31,16 +33,15 @@ $.path.tasks.forEach(function (taskPath) {
 });
 
 
-$.gulp.task('img', $.gulp.series('cleanimg', 'img-responsive'));
+$.gulp.task('img', $.gulp.series('cleanimg', 'img-responsive', 'img1x'));
 $.gulp.task('libs', $.gulp.series('cleanlibs', 'copylibs'));
 
 $.gulp.task('default', $.gulp.series('svg', 'svgCopy',
 	// $.gulp.parallel('svg','pug','scripts:lib','scripts','file'),
 	// $.gulp.parallel('file'),
-
+	'img',
 	$.gulp.parallel( 
-		'pug',
-		'img',
+		'pug', 
 		'libs',
 		'scripts',
 		'sass',
