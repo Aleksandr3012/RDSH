@@ -1,6 +1,5 @@
 // start .topLine
 .topLine {
-
 	&__inner {
 		padding: rem(8px);
 		border-radius: rem(15px);
@@ -67,7 +66,6 @@
 		@include roww(10px);
 		@include media-breakpoint-up(xxl) {
 			@include roww(20px);
-
 		}
 	}
 
@@ -99,7 +97,7 @@
 		@include a-cent(y);
 		right: rem(10px);
 		outline: none !important;
-		
+
 		.icon {
 			font-size: rem(20);
 			color: #fff;
@@ -132,14 +130,15 @@
 		@include media-breakpoint-up(sm) {
 			width: 56px;
 			height: 56px;
-			padding: rem(10);
+			// padding: rem(10);
 		}
 		border-radius: 50%;
 		border: none !important;
 		outline: none !important;
-		display: grid;
-		place-items: center;
-		margin-left: rem(10);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// margin-left: rem(10);
 		@include media-breakpoint-up(xl) {
 			margin-left: rem(20);
 		}
@@ -161,16 +160,18 @@
 
 	&__input {
 		@include media-breakpoint-only(lg) {
-			padding: .67rem .6rem;
+			padding: 0.67rem 0.6rem;
 		}
 	}
 
-	
-
-	@include media-breakpoint-up(xs) {}
-	@include media-breakpoint-between(md, xl) { }
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-up(xs) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 
 	&__audio-wrap {
 		@include media-breakpoint-up(lg) {
@@ -188,7 +189,6 @@
 			top: 126%;
 		}
 	}
-
 } // end.topLine
 
 .plyr {
@@ -202,7 +202,10 @@
 		max-width: 220px;
 	}
 	&__controls {
-		background: rgba($color: $body-color, $alpha: 0.1) !important;
+		background: rgba($color: $body-color, $alpha: 0.3) !important;
+		@include media-breakpoint-up(lg) {
+			background: rgba($color: $body-color, $alpha: 0.1) !important;
+		}
 		border-radius: rem(30) !important;
 
 		svg {
@@ -217,7 +220,10 @@
 		}
 	}
 
-	&__time, &__progress, &__control[data-plyr="settings"], &__progress__container {
+	&__time,
+	&__progress,
+	&__control[data-plyr="settings"],
+	&__progress__container {
 		display: none;
 	}
 
@@ -236,7 +242,7 @@
 		width: 112px;
 	}
 
-	input[type=range] {
+	input[type="range"] {
 		// color: #fff;
 	}
 }
